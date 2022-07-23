@@ -1,0 +1,17 @@
+.primary__header {
+  width: 100%;
+  background: var(--clr-variant);
+  height: 50px;
+  display: flex;
+}
+
+.primary__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}

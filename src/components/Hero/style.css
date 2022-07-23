@@ -1,0 +1,25 @@
+.hero__container {
+  width: 100%;
+  background-color: salmon;
+  height: 504px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero__columns {
+  display: flex;
+  width: 100%;
+  background: lightblue;
+}
+
+.hero__info {
+  width: 800px;
+  background-color: tan;
+  margin: 0 auto;
+}
+
+.hero__image img {
+  width: 704px;
+  height: 407px;
+}

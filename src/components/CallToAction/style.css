@@ -1,0 +1,29 @@
+.cta__container {
+  background: var(--clr-primary);
+  border-radius: var(--bora-xl);
+  height: 326px;
+  display: flex;
+}
+
+.cta__columns {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta__columns h1 {
+  text-align: center;
+  color: var(--clr-neutral-100);
+  margin-bottom: 16px;
+}
+
+.cta__columns p {
+  color: var(--clr-neutral-100);
+  margin: 0 auto 52px;
+  width: 468px;
+  text-align: center;
+}
+
+.cta__button {
+  margin: 0 auto;
+}

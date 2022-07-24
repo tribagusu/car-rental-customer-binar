@@ -1,11 +1,12 @@
 import "./style.css";
 import serviceImg from "../../assets/img_service.png";
 
-const Services = () => {
+const Services = (props) => {
+  const { strList, checkIcon } = props;
   return (
     <section>
-      <div class="container services__container">
-        <div class="services__columns">
+      <div className="container services__container">
+        <div className="services__columns">
           <div className="services__image">
             <img src={serviceImg} alt="services" />
           </div>
@@ -17,35 +18,21 @@ const Services = () => {
               kualitas pelayanan terbaik untuk perjalanan wisata, bisnis,
               wedding, meeting, dll.
             </p>
-            <div class="services__checklist">
-              <ul>
-                <li>
-                  <i class="uil uil-check"></i>
-                </li>
-                <li>
-                  {" "}
-                  <i class="uil uil-check"></i>
-                </li>
-                <li>
-                  {" "}
-                  <i class="uil uil-check"></i>
-                </li>
-                <li>
-                  {" "}
-                  <i class="uil uil-check"></i>
-                </li>
-                <li>
-                  {" "}
-                  <i class="uil uil-check"></i>
-                </li>
-              </ul>
-              <ul>
-                <li>Sewa Mobil Dengan Supir di Bali 12 Jam</li>
-                <li>Sewa Mobil Lepas Kunci di Bali 24 Jam</li>
-                <li>Sewa Mobil Jangka Panjang Bulanan</li>
-                <li>Gratis Antar - Jemput Mobil di Bandara</li>
-                <li>Layanan Airport Transfer / Drop In Out</li>
-              </ul>
+            <div className="services__checklist">
+              <div>
+                {checkIcon.map((item) => (
+                  <ul>
+                    <li>{item}</li>
+                  </ul>
+                ))}
+              </div>
+              <div>
+                {strList.map((item) => (
+                  <ul>
+                    <li>{item}</li>
+                  </ul>
+                ))}
+              </div>
             </div>
           </div>
         </div>

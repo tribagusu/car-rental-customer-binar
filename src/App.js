@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import SearchCars from "./pages/SearchCars";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div>
       <Routes>
@@ -14,6 +14,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

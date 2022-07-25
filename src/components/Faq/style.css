@@ -1,0 +1,12 @@
+.faq__columns {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+}
+
+.faq {
+  margin-bottom: 1rem;
+}
+
+.faq__column__right p {
+  font-weight: var(--fw-regular);
+}

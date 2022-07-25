@@ -3,6 +3,7 @@ import Car from "./pages/Car";
 import Home from "./pages/Home";
 import SearchCars from "./pages/SearchCars";
 import "./App.css";
+import React from "react";
 
 const App = () => {
   return (

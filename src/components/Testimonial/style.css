@@ -11,12 +11,8 @@
   margin: 0 auto 40px;
 }
 
-.carousel__container {
-  display: flex;
-}
-
 .carousel__card {
-  width: 619px;
+  width: 650px;
   height: 270px;
   background: var(--clr-variant);
   border-radius: var(--bora-lg);
@@ -28,19 +24,30 @@
   margin: 0 auto;
 }
 
-.carousel__card__image img {
-  border-radius: 50%;
+.carousel__card__left {
+  /* background: tan; */
+  display: flex;
 }
 
-.carousel__card__info__stars ul li {
+.carousel__card__left img {
+  border-radius: 50%;
+  width: 80%;
+  margin: auto;
+}
+
+.carousel__card__info__stars {
+  display: flex;
+}
+
+.carousel__card__right li {
   color: var(--clr-warning);
   margin-bottom: 0.5rem;
 }
 
-.carousel__card__info > p {
+.carousel__card__right > p {
   margin-bottom: 1rem;
 }
 
-.carousel__card__info small {
+.carousel__card__right small {
   font-weight: var(--fw-regular);
 }

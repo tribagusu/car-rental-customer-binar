@@ -2,7 +2,7 @@ import "./style.css";
 import serviceImg from "../../assets/img_service.png";
 
 const Services = (props) => {
-  const { strList, checkIcon } = props;
+  const { strList, checkIcon5 } = props;
   return (
     <section>
       <div className="container services__container">
@@ -20,7 +20,7 @@ const Services = (props) => {
             </p>
             <div className="services__checklist">
               <div>
-                {checkIcon.map((item) => (
+                {checkIcon5.map((item) => (
                   <ul>
                     <li>{item}</li>
                   </ul>

@@ -1,26 +1,22 @@
 import "./style.css";
+import { AppBar } from "@mui/material/AppBar";
+import { Link } from "react-router-dom";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const { NavMenu } = props;
   return (
     <header className="primary__header">
       <div className="container primary__container">
-        <a href="#">
+        <Link to="/">
           <img src="" alt="Binar Car Rental" />
-        </a>
+        </Link>
         <nav className="primary__navigation">
           <ul className="nav__list">
-            <li>
-              <a href="#">Our Services</a>
-            </li>
-            <li>
-              <a href="#">Why Us</a>
-            </li>
-            <li>
-              <a href="#">Testimonial</a>
-            </li>
-            <li>
-              <a href="#">FAQ</a>
-            </li>
+            {NavMenu.map((item) => (
+              <li>
+                <a href="#strength">{item}</a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

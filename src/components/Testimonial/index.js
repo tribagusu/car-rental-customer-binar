@@ -42,7 +42,7 @@ const Testimonial = (props) => {
     ],
   };
   return (
-    <section className="carousel">
+    <section className="carousel" id="testimonial">
       <h2>Testimonial</h2>
       <p>Berbagai review positif dari para pelanggan kami</p>
       <div className="carousel__container">

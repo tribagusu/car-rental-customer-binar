@@ -1,7 +1,7 @@
 import "./style.css";
 
 const Footer = (props) => {
-  const { socialMediaLogo, FooterNav } = props;
+  const { socialMediaLogo, NavMenu } = props;
   return (
     <footer>
       <div class="container">
@@ -14,7 +14,7 @@ const Footer = (props) => {
 
           <div class="footer__navigation">
             <ul>
-              {FooterNav.map((item) => (
+              {NavMenu.map((item) => (
                 <li>
                   <a href="#">{item}</a>
                 </li>

@@ -13,23 +13,25 @@ import {
   dataTestimoni,
   faq,
   socialMediaLogo,
-  FooterNav,
+  NavMenu,
 } from "../../const/staticData";
 
 const Home = () => {
+  const showBtn = true;
   const props = {
     strList,
     checkIcon5,
     dataTestimoni,
     faq,
     socialMediaLogo,
-    FooterNav,
+    NavMenu,
+    showBtn,
   };
 
   return (
     <div>
-      <Navigation />
-      <Hero />
+      <Navigation {...props} />
+      <Hero {...props} />
       <Services {...props} />
       <Strength />
       <Testimonial {...props} />

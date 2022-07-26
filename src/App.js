@@ -1,5 +1,5 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Car from "./pages/Car";
+import { Routes, Route } from "react-router-dom";
+import DetailCar from "./pages/DetailCar";
 import Home from "./pages/Home";
 import SearchCars from "./pages/SearchCars";
 import "./App.css";
@@ -10,8 +10,8 @@ const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/carimobil" element={<SearchCars />} />
-        <Route path="/mobil" element={<Car />} />
+        <Route path="/carimobil/" element={<SearchCars />} />
+        <Route path="/detailmobil/:id" element={<DetailCar />} />
       </Routes>
     </div>
   );

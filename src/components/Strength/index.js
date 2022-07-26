@@ -3,7 +3,7 @@ import Cards from "../Cards/index.js";
 
 const Strength = () => {
   return (
-    <section>
+    <section id="strength">
       <div className="container  strength__container">
         <h2>Why Us?</h2>
         <p>Mengapa harus pilih Binar Car Rental?</p>

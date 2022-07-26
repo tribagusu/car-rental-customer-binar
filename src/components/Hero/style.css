@@ -22,7 +22,7 @@
 
 .hero__info p {
   margin: 2rem 0 1rem;
-  width: 500px;
+  width: 90%;
 }
 
 .hero__image img {
@@ -31,4 +31,28 @@
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+/* _ Responsive Breakpoints */
+@media screen and (max-width: 415px) {
+  .container {
+    width: var(--container-sm);
+  }
+
+  .hero__container {
+    position: none;
+    height: 657px;
+  }
+
+  .hero__info {
+    width: 328px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .hero__image img {
+    position: none;
+    width: 344.22px;
+    height: 199px;
+  }
 }

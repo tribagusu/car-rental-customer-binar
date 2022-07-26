@@ -1,14 +1,18 @@
-import { UilThumbsUp } from "@iconscout/react-unicons";
-import { UilPricetagAlt } from "@iconscout/react-unicons";
-import { UilClock } from "@iconscout/react-unicons";
-import { UilAwardAlt } from "@iconscout/react-unicons";
+import {
+  UilThumbsUp,
+  UilPricetagAlt,
+  UilClock,
+  UilAwardAlt,
+} from "@iconscout/react-unicons";
 
 // # fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faCheck,
+  faAngleDown,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -22,14 +26,6 @@ import testiImage2 from "../assets/testimonials-2.jpg";
 import testiImage3 from "../assets/testimonials-3.jpg";
 
 // _ variables
-const strList = [
-  "Sewa Mobil Dengan Supir di Bali 12 Jam",
-  "Sewa Mobil Lepas Kunci di Bali 24 Jam",
-  "Sewa Mobil Jangka Panjang Bulanan",
-  "Gratis Antar - Jemput Mobil di Bandara",
-  "Layanan Airport Transfer / Drop In Out",
-];
-
 // # icons
 const checkIcon = [<FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>];
 const checkIcon5 = Array(5).fill(checkIcon);
@@ -38,6 +34,18 @@ const starsIcon = [<FontAwesomeIcon icon={faStar}></FontAwesomeIcon>];
 const starsIcon5 = Array(5).fill(starsIcon);
 
 const angleDownIcon = <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>;
+
+// # navigation
+const NavMenu = ["Our services", "Why us", "Testimonial", "FAQ"];
+
+// # services
+const strList = [
+  "Sewa Mobil Dengan Supir di Bali 12 Jam",
+  "Sewa Mobil Lepas Kunci di Bali 24 Jam",
+  "Sewa Mobil Jangka Panjang Bulanan",
+  "Gratis Antar - Jemput Mobil di Bandara",
+  "Layanan Airport Transfer / Drop In Out",
+];
 
 // #strength
 const strengthCard = [
@@ -147,9 +155,6 @@ const socialMediaLogo = [
   <FontAwesomeIcon icon={faTwitch}></FontAwesomeIcon>,
 ];
 
-// # footer navigation
-const FooterNav = ["Our services", "Why us", "Testimonial", "FAQ"];
-
 // _ export
 
 export {
@@ -159,5 +164,5 @@ export {
   dataTestimoni,
   faq,
   socialMediaLogo,
-  FooterNav,
+  NavMenu,
 };

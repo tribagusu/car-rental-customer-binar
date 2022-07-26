@@ -131,7 +131,7 @@ a:hover {
 
 /* _Responsive Breakpoints */
 /* # tablet */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-md);
   }
@@ -139,11 +139,11 @@ a:hover {
   section {
     margin-top: 60px;
   }
-}
+} */
 
 /* # phone */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .container {
     width: var(--container-md);
   }
-}
+} */

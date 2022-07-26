@@ -11,7 +11,7 @@ const Faq = (props) => {
   //   setSelected(newValue ? panel : -1);
   // };
   return (
-    <section>
+    <section id="faq">
       <div className="container">
         <div className="faq__columns">
           <div className="faq__column__left">

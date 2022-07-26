@@ -4,7 +4,7 @@ import serviceImg from "../../assets/img_service.png";
 const Services = (props) => {
   const { strList, checkIcon5 } = props;
   return (
-    <section>
+    <section id="services">
       <div className="container services__container">
         <div className="services__columns">
           <div className="services__image">

@@ -3,13 +3,20 @@ import { UilPricetagAlt } from "@iconscout/react-unicons";
 import { UilClock } from "@iconscout/react-unicons";
 import { UilAwardAlt } from "@iconscout/react-unicons";
 
-// fontawesome
+// # fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faTwitch,
+} from "@fortawesome/free-brands-svg-icons";
 
-// image
+// # image
 import testiImage1 from "../assets/testimonials-1.jpg";
 import testiImage2 from "../assets/testimonials-2.jpg";
 import testiImage3 from "../assets/testimonials-3.jpg";
@@ -32,8 +39,7 @@ const starsIcon5 = Array(5).fill(starsIcon);
 
 const angleDownIcon = <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>;
 
-// # object
-// strength
+// #strength
 const strengthCard = [
   {
     id: 1,
@@ -65,7 +71,7 @@ const strengthCard = [
   },
 ];
 
-// testimoni
+// # testimoni
 const dataTestimoni = [
   {
     id: 1,
@@ -93,7 +99,7 @@ const dataTestimoni = [
   },
 ];
 
-// frequently asked questions
+// # frequently asked questions
 const faq = [
   {
     id: 1,
@@ -132,6 +138,26 @@ const faq = [
   },
 ];
 
+// # footer socialmedia logo
+const socialMediaLogo = [
+  <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>,
+  <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>,
+  <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>,
+  <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>,
+  <FontAwesomeIcon icon={faTwitch}></FontAwesomeIcon>,
+];
+
+// # footer navigation
+const FooterNav = ["Our services", "Why us", "Testimonial", "FAQ"];
+
 // _ export
 
-export { strList, checkIcon5, strengthCard, dataTestimoni, faq };
+export {
+  strList,
+  checkIcon5,
+  strengthCard,
+  dataTestimoni,
+  faq,
+  socialMediaLogo,
+  FooterNav,
+};

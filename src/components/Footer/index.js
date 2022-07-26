@@ -1,6 +1,7 @@
 import "./style.css";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { socialMediaLogo, FooterNav } = props;
   return (
     <footer>
       <div class="container">
@@ -13,49 +14,22 @@ const Footer = () => {
 
           <div class="footer__navigation">
             <ul>
-              <li>
-                <a href="#">Our services</a>
-              </li>
-              <li>
-                <a href="#">Why Us</a>
-              </li>
-              <li>
-                <a href="#">Testimonial</a>
-              </li>
-              <li>
-                <a href="#">FAQ</a>
-              </li>
+              {FooterNav.map((item) => (
+                <li>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div class="footer__social-media">
             <h4>Connect with us</h4>
             <ul>
-              <li>
-                <a href="#">
-                  <i class="uil uil-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="uil uil-instagram-alt"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="uil uil-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="uil uil-envelope"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="uil uil-tv-retro"></i>
-                </a>
-              </li>
+              {socialMediaLogo.map((item) => (
+                <li>
+                  <a href="#">{item}</a>
+                </li>
+              ))}
             </ul>
           </div>
 

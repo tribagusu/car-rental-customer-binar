@@ -12,6 +12,8 @@ import {
   checkIcon5,
   dataTestimoni,
   faq,
+  socialMediaLogo,
+  FooterNav,
 } from "../../const/staticData";
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
     checkIcon5,
     dataTestimoni,
     faq,
+    socialMediaLogo,
+    FooterNav,
   };
 
   return (
@@ -31,7 +35,7 @@ const Home = () => {
       <Testimonial {...props} />
       <CallToAction />
       <Faq {...props} />
-      <Footer />
+      <Footer {...props} />
     </div>
   );
 };

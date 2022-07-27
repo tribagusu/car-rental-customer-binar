@@ -1,6 +1,8 @@
 import "./style.css";
+import { Link } from "react-router-dom";
 
-const CallToAction = () => {
+const CallToAction = (props) => {
+  const { ButtonSewa } = props;
   return (
     <section>
       <div className="container cta__container">
@@ -11,7 +13,7 @@ const CallToAction = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className=" cta__button">
-            <button className="button">Mulai Sewa Mobil</button>
+            <Link to="/carimobil">{ButtonSewa}</Link>
           </div>
         </div>
       </div>

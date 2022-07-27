@@ -14,10 +14,11 @@ import {
   faq,
   socialMediaLogo,
   NavMenu,
+  ButtonSewa,
 } from "../../const/staticData";
 
 const Home = () => {
-  const showBtn = true;
+  // const showBtn = true;
   const props = {
     strList,
     checkIcon5,
@@ -25,7 +26,8 @@ const Home = () => {
     faq,
     socialMediaLogo,
     NavMenu,
-    showBtn,
+    // showBtn,
+    ButtonSewa,
   };
 
   return (
@@ -35,7 +37,7 @@ const Home = () => {
       <Services {...props} />
       <Strength />
       <Testimonial {...props} />
-      <CallToAction />
+      <CallToAction {...props} />
       <Faq {...props} />
       <Footer {...props} />
     </div>

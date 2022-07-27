@@ -26,6 +26,12 @@ import testiImage2 from "../assets/testimonials-2.jpg";
 import testiImage3 from "../assets/testimonials-3.jpg";
 
 // _ variables
+// # Buttons
+const ButtonSewa = [<button className="button">Mulai Sewa Mobil</button>];
+const ButtonCari = [<button className="button">Cari Mobil</button>];
+const ButtonPilih = [<button className="button">Pilih Mobil</button>];
+const ButtonEdit = [<button className="button">Edit</button>];
+
 // # icons
 const checkIcon = [<FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>];
 const checkIcon5 = Array(5).fill(checkIcon);
@@ -36,7 +42,12 @@ const starsIcon5 = Array(5).fill(starsIcon);
 const angleDownIcon = <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>;
 
 // # navigation
-const NavMenu = ["Our services", "Why us", "Testimonial", "FAQ"];
+const NavMenu = [
+  <a href="#services">Our services</a>,
+  <a href="#strength">Why us</a>,
+  <a href="#testimonial">Testimonial</a>,
+  <a href="#faq">FAQ</a>,
+];
 
 // # services
 const strList = [
@@ -165,4 +176,8 @@ export {
   faq,
   socialMediaLogo,
   NavMenu,
+  ButtonSewa,
+  ButtonCari,
+  ButtonPilih,
+  ButtonEdit,
 };

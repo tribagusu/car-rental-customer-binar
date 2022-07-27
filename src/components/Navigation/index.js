@@ -13,9 +13,7 @@ const Navigation = (props) => {
         <nav className="primary__navigation">
           <ul className="nav__list">
             {NavMenu.map((item) => (
-              <li>
-                <a href="#strength">{item}</a>
-              </li>
+              <li>{item}</li>
             ))}
           </ul>
         </nav>

@@ -27,14 +27,12 @@ const DataDetailCar = () => {
             <li>Tidak termasuk akomodasi penginapan</li>
           </ul>
         </div>
-        <div className="DataDetailCar__refund-reschedule-overtime">
-          <Accordion
-            style={{ boxShadow: "none" }}
-
-            // expanded={selected === 1}
-            // onChange={handleSelected(1)}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <div className="DataDetailCar__refund">
+          <Accordion style={{ boxShadow: "none" }}>
+            <AccordionSummary
+              style={{ padding: 0 }}
+              expandIcon={<ExpandMoreIcon />}
+            >
               <h4>Refund, Reschedule, Overtime</h4>
             </AccordionSummary>
             <AccordionDetails>

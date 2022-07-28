@@ -13,3 +13,8 @@
   font-weight: var(--fw-regular);
   line-height: 1.6;
 }
+
+.DataDetailCar__refund h4 {
+  margin: 0;
+  padding: 0;
+}

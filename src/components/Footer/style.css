@@ -4,6 +4,8 @@ footer {
 .footer__columns {
   display: flex;
   justify-content: space-between;
+  width: 1141px;
+  margin: auto;
 }
 
 .footer__address > * {

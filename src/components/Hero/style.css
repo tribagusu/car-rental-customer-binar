@@ -12,6 +12,7 @@
 .hero__columns {
   display: flex;
   justify-content: space-between;
+  width: 1440px;
 }
 
 .hero__info {

@@ -1,11 +1,5 @@
 import "./style.css";
-import {
-  AppBar,
-  Typography,
-  Toolbar,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Fragment, default as React } from "react";
 import DrawerComp from "../Drawer";
@@ -20,7 +14,6 @@ const Navigation = (props) => {
         sx={{
           background: "var(--clr-variant)",
           boxShadow: "none",
-          // position: "inherit",
         }}
       >
         <Toolbar>

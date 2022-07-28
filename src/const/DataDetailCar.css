@@ -1,5 +1,15 @@
-.DataDetailCar__container {
+.DataDetailCar__section {
   display: flex;
-  align-items: flex-end;
-  background: tan;
+  flex-direction: column;
+  height: 100%;
+}
+
+.DataDetailCar__section h4 {
+  margin: 1rem 0;
+}
+
+.DataDetailCar__section li {
+  list-style: circle;
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
 }

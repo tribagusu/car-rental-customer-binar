@@ -3,12 +3,13 @@
 }
 
 .services__columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 1200px;
+  display: flex;
+  width: 1027px;
   margin: 0 auto;
   align-items: center;
+  justify-content: space-between;
 }
+
 .services__image {
   width: 459px;
   height: 428px;

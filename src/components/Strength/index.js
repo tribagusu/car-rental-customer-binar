@@ -8,7 +8,7 @@ const Strength = (props) => {
         <h2>Why Us?</h2>
         <p>Mengapa harus pilih Binar Car Rental?</p>
       </div>
-      <div className="container">
+      <div className="strength__cards__container">
         <div className="strength__cards">
           {strengthCard.map((item) => (
             <div className="card">

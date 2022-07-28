@@ -3,6 +3,7 @@
   border-radius: var(--bora-xl);
   height: 326px;
   display: flex;
+  width: 1168px;
 }
 
 .cta__columns {

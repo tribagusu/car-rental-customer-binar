@@ -10,7 +10,24 @@ import axios from "axios";
 
 const SearchCars = () => {
   const [data, setData] = useState([]);
-  // console.log("  🔸-> data", data);
+  const [name, setName] = useState("");
+  // console.log("  🔸-> name", name);
+  const handleChangeName = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleSearch = () => {
+    const newArr = data.filter((data) => data.name === name);
+    setData(newArr);
+
+    // const payload = {
+    //   name: name,
+    // };
+    // axios
+    //   .post("https://bootcamp-rent-car.herokuapp.com/admin/car", payload)
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.log(err));
+  };
 
   useEffect(() => {
     axios
@@ -24,13 +41,15 @@ const SearchCars = () => {
     NavMenu,
     data,
     ButtonPilih,
+    handleChangeName,
+    handleSearch,
   };
 
   return (
     <div>
       <Navigation {...props} />
       <Hero />
-      <SearchBar />
+      <SearchBar {...props} />
       <SearchResult {...props} />
       <Footer {...props} />
     </div>

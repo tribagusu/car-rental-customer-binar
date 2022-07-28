@@ -85,6 +85,10 @@ h3 {
   line-height: 24px;
 }
 
+p {
+  font-weight: var(--fw-regular);
+}
+
 img,
 svg,
 picture {

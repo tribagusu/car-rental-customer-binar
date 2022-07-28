@@ -46,6 +46,7 @@ aside {
   width: 208px;
   font-weight: var(--fw-light);
   padding: 10px;
+  background: var(--clr-neutral-100);
 }
 
 .search-bar__button {

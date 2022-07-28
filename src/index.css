@@ -115,7 +115,7 @@ picture {
 
 .button:hover {
   background: transparent;
-  border: 1px solid var(--clr-neutral-100);
+  border: 1px solid var(--clr-accent);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   color: var(--clr-accent);
 }

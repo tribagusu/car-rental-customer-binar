@@ -14,11 +14,9 @@ const Hero = (props) => {
             terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
             untuk sewa mobil selama 24 jam.
           </p>
-          {/* {!!showBtn && ( */}
           <div>
             <Link to="/carimobil">{ButtonSewa}</Link>
           </div>
-          {/* )} */}
         </div>
         <div className="hero__image">
           <img src={carImg} alt="Binar Car" />

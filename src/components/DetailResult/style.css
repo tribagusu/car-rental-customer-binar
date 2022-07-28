@@ -1,0 +1,51 @@
+.detail__section {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail__hero {
+  width: 100%;
+  background-color: var(--clr-variant);
+  height: 200px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+
+.detail__result__container {
+  width: 1042px;
+  height: 618px;
+  display: flex;
+  margin: 3rem auto 0;
+  gap: 24px;
+}
+
+.detail__result__info {
+  width: 605px;
+  height: 618px;
+  border-radius: var(--bora-lg);
+  padding: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail__result__car {
+  width: 405px;
+  height: 435px;
+  border-radius: var(--bora-lg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.detail__result__car h1 {
+  font-size: 1rem;
+}
+
+.detail__result__total-price {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}

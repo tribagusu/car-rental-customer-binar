@@ -5,3 +5,21 @@
 .strength__container p {
   margin-bottom: 40px;
 }
+
+.strength__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 268px;
+  height: 196px;
+  padding: 24px;
+  border-radius: var(--bora-lg);
+  border: 1px solid var(--clr-neutral-200);
+}
+
+.card img,
+.card h3 {
+  margin-bottom: 16px;
+}

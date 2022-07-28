@@ -1,3 +1,4 @@
+import React from "react";
 import Navigation from "../../components/Navigation";
 import Hero from "../../components/Hero";
 import Services from "../../components/Services";
@@ -15,10 +16,10 @@ import {
   socialMediaLogo,
   NavMenu,
   ButtonSewa,
+  strengthCard,
 } from "../../const/staticData";
 
 const Home = () => {
-  // const showBtn = true;
   const props = {
     strList,
     checkIcon5,
@@ -26,8 +27,8 @@ const Home = () => {
     faq,
     socialMediaLogo,
     NavMenu,
-    // showBtn,
     ButtonSewa,
+    strengthCard,
   };
 
   return (
@@ -35,7 +36,7 @@ const Home = () => {
       <Navigation {...props} />
       <Hero {...props} />
       <Services {...props} />
-      <Strength />
+      <Strength {...props} />
       <Testimonial {...props} />
       <CallToAction {...props} />
       <Faq {...props} />

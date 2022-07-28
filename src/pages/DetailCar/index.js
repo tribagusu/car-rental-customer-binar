@@ -1,6 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Navigation from "../../components/Navigation";
+import DetailResult from "../../components/DetailResult";
+import { socialMediaLogo, NavMenu } from "../../const/staticData";
+import Footer from "../../components/Footer";
 
 const Car = () => {
   const [car, setCar] = useState({});
@@ -15,18 +19,16 @@ const Car = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(car);
+  const props = {
+    car,
+    socialMediaLogo,
+    NavMenu,
+  };
   return (
     <div>
-      {!!Object.keys(car).length ? (
-        <div>
-          <h1>{car.name}</h1>
-          <img src={car.image} />
-          <p>{car.category}</p>
-        </div>
-      ) : (
-        <p>loading...</p>
-      )}
+      <Navigation {...props} />
+      <DetailResult {...props} />
+      <Footer {...props} />
     </div>
   );
 };

@@ -1,14 +1,14 @@
 .primary__header {
-  width: 100%;
-  background: var(--clr-variant);
-  height: 54px;
-  display: flex;
+  width: 100vw;
+  /* background: var(--clr-variant); */
+  height: 60px;
 }
 
 .primary__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .nav__list {
@@ -16,13 +16,23 @@
   gap: 2rem;
 }
 
+.logo-small-screen {
+  display: none;
+}
+
 /* _ Responsive Breakpoints */
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 900px) {
   .container {
-    width: var(--container-sm);
+    width: var(--container-md);
   }
 
-  .nav__list {
-    display: none;
+  .logo-small-screen {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-sm);
   }
 }

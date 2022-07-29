@@ -1,6 +1,7 @@
 import DataDetailCar from "../../const/DataDetailCar";
 import { Link } from "react-router-dom";
 import "./style.css";
+import noImage from "../../assets/no-image-available.png";
 
 const DetailResult = (props) => {
   const { car, ButtonCari } = props;
@@ -15,7 +16,7 @@ const DetailResult = (props) => {
           <div>
             {!!Object.keys(car).length ? (
               <div>
-                <img src={car.image} />
+                {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
                 <h1>{car.name}</h1>
                 <p>{car.category}</p>
                 <div className="detail__result__total-price">

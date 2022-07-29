@@ -16,7 +16,13 @@ const DetailResult = (props) => {
           <div>
             {!!Object.keys(car).length ? (
               <div>
-                {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
+                <div className="detail__result__car-image">
+                  {!!car.image ? (
+                    <img src={car.image} />
+                  ) : (
+                    <img src={noImage} />
+                  )}
+                </div>
                 <h1>{car.name}</h1>
                 <p>{car.category}</p>
                 <div className="detail__result__total-price">

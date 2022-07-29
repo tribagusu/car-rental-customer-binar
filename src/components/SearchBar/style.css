@@ -52,3 +52,7 @@ aside {
 .search-bar__button {
   align-self: flex-end;
 }
+
+.search-bar__button button:hover {
+  background: transparent;
+}

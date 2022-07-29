@@ -13,7 +13,6 @@ const Testimonial = (props) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,

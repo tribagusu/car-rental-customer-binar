@@ -26,7 +26,6 @@
 
 .detail__result__info {
   width: 605px;
-  /* min-height: 100px; */
   border-radius: var(--bora-lg);
   padding: 2rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -48,4 +47,19 @@
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+}
+
+.detail__result__button-cari-mobil {
+  display: flex;
+  width: 400px;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.detail__result__button-cari-mobil button {
+  width: 350px;
+}
+
+.detail__result__button-cari-mobil button:hover {
+  background: transparent;
 }

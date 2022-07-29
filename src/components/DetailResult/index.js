@@ -1,8 +1,9 @@
 import DataDetailCar from "../../const/DataDetailCar";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const DetailResult = (props) => {
-  const { car } = props;
+  const { car, ButtonCari } = props;
   return (
     <section className="detail__section">
       <div className="detail__hero"></div>
@@ -25,6 +26,11 @@ const DetailResult = (props) => {
             ) : (
               <p>loading...</p>
             )}
+          </div>
+          <div className="detail__result__button-cari-mobil">
+            <Link to="/carimobil">
+              <button>{ButtonCari}</button>
+            </Link>
           </div>
         </div>
       </div>

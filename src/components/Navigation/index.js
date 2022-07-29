@@ -18,7 +18,7 @@ const Navigation = (props) => {
       >
         <Toolbar>
           <Link to="/" className="logo-small-screen">
-            <img src="" alt="Binar Car Rental" />
+            <a href="#hero">Binar Car Rental</a>
           </Link>
           {isMatch ? (
             <>
@@ -26,10 +26,10 @@ const Navigation = (props) => {
             </>
           ) : (
             <>
-              <div className="primary__header">
+              <div className="primary__header" id="nav">
                 <div className="container primary__container">
                   <Link to="/" className="logo-big-screen">
-                    <img src="" alt="Binar Car Rental" />
+                    <a href="#hero">Binar Car Rental</a>
                   </Link>
                   <nav className="primary__navigation">
                     <ul className="nav__list">

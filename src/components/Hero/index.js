@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Hero = (props) => {
   const { ButtonSewa } = props;
   return (
-    <section className="hero__container">
+    <section className="hero__container" id="hero">
       <div className="container hero__columns">
         <div className="hero__info">
           <h1>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h1>

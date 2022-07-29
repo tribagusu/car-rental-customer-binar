@@ -1,7 +1,10 @@
 import DataDetailCar from "../../const/DataDetailCar";
 import "./style.css";
 
-// const toCurrency = (number, currency, (lang = undefined));
+const toCurrency = (number, currency, lang = undefined) =>
+  Intl.NumberFormat(lang, { style: "currency", currency }).format(number);
+
+const changeCurrency = toCurrency(1234567, "IDR");
 
 const DetailResult = (props) => {
   const { car } = props;

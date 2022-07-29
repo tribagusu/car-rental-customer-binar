@@ -35,7 +35,7 @@ const DataDetailCar = () => {
             >
               <h4>Refund, Reschedule, Overtime</h4>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails style={{ padding: "0" }}>
               <ul>
                 <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
                 <li>

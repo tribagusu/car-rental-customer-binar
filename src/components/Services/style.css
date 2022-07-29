@@ -45,3 +45,21 @@
   margin: auto;
   color: var(--clr-primary);
 }
+
+/* _ Responsive Breakpoints */
+@media screen and (max-width: 600px) {
+  .services__columns {
+    flex-direction: column;
+    width: 328px;
+  }
+
+  .services__image {
+    width: 252px;
+    height: 228px;
+    margin-bottom: 3rem;
+  }
+
+  .services__info {
+    width: 328px;
+  }
+}

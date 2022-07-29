@@ -28,3 +28,25 @@
 .cta__button {
   margin: 0 auto;
 }
+
+/* _ Responsive Breakpoints */
+@media screen and (max-width: 600px) {
+  .cta__container {
+    width: 328px;
+    height: 420px;
+  }
+
+  .cta__columns {
+    width: 212px;
+  }
+
+  .cta__columns h1 {
+    font-size: var(--fs-400);
+    line-height: 36px;
+  }
+
+  .cta__columns p {
+    width: 100%;
+    margin: 0 auto 2rem;
+  }
+}

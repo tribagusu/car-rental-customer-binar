@@ -25,7 +25,6 @@
 }
 
 .carousel__card__left {
-  /* background: tan; */
   display: flex;
 }
 
@@ -35,8 +34,9 @@
   margin: auto;
 }
 
-.carousel__card__info__stars {
+.carousel__card__right {
   display: flex;
+  flex-direction: column;
 }
 
 .carousel__card__right li {
@@ -50,4 +50,21 @@
 
 .carousel__card__right small {
   font-weight: var(--fw-regular);
+}
+
+/* _ Responsive Breakpoints */
+@media screen and (max-width: 600px) {
+  .carousel__card {
+    flex-direction: column;
+    width: 328px;
+    height: 392px;
+  }
+
+  .carousel__card__left {
+    width: 80px;
+  }
+
+  .carousel__card__right li {
+    margin: 0 auto 1rem;
+  }
 }

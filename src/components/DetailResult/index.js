@@ -1,6 +1,8 @@
 import DataDetailCar from "../../const/DataDetailCar";
 import "./style.css";
 
+// const toCurrency = (number, currency, (lang = undefined));
+
 const DetailResult = (props) => {
   const { car } = props;
   return (

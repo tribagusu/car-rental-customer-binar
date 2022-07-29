@@ -1,11 +1,20 @@
 footer {
   margin-bottom: 100px;
 }
+
 .footer__columns {
   display: flex;
   justify-content: space-between;
   width: 1141px;
   margin: auto;
+}
+
+.footer__columns p {
+  font-weight: var(--fw-bold);
+}
+
+.footer__columns a {
+  font-weight: var(--fw-regular);
 }
 
 .footer__address > * {
@@ -39,4 +48,23 @@ footer {
 
 .copyright > * {
   margin-bottom: 16px;
+}
+
+/* _ Responsive Breakpoints */
+@media screen and (max-width: 600px) {
+  section,
+  footer {
+    margin-top: 70px;
+  }
+
+  .footer__columns {
+    width: 328px;
+    flex-direction: column;
+  }
+
+  .footer__social-media ul {
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
 }

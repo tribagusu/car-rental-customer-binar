@@ -1,5 +1,6 @@
 import "./style.css";
 import { Link } from "react-router-dom";
+import noImage from "../../assets/no-image-available.png";
 
 const SearchResult = (props) => {
   const { data, ButtonPilih } = props;
@@ -13,9 +14,14 @@ const SearchResult = (props) => {
           data.map((item) => (
             <div className="search-result__cards">
               <div>
-                <img src={item.image} />
+                {!!item.image ? (
+                  <img src={item.image} />
+                ) : (
+                  <img src={noImage} />
+                )}
                 <div className="search-result__cards__info">
-                  <h1>{item.name}</h1>
+                  {!!item.name ? <h1>{item.name}</h1> : <h1>not available</h1>}
+
                   <p>{item.price} / hari</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -12,3 +12,16 @@
 .faq__column__right p {
   font-weight: var(--fw-regular);
 }
+
+/* _ Responsive Breakpoints */
+@media screen and (max-width: 600px) {
+  .faq__columns {
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq__column__left {
+    margin-bottom: 2rem;
+  }
+}

@@ -49,7 +49,7 @@
   justify-content: space-between;
 }
 
-.detail__result__button-cari-mobil {
+/* .detail__result__button-cari-mobil {
   display: flex;
   width: 20px;
   margin-top: 10px;
@@ -65,4 +65,4 @@
 
 .detail__result__button-cari-mobil button:hover {
   background: transparent;
-}
+} */

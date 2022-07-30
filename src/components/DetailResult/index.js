@@ -8,11 +8,11 @@ const DetailResult = (props) => {
   return (
     <section className="detail__section">
       <div className="detail__hero"></div>
-      <div className="detail__result__button-cari-mobil">
+      {/* <div className="detail__result__button-cari-mobil">
         <Link to="/carimobil">
           <button>{ButtonBack}</button>
         </Link>
-      </div>
+      </div> */}
       <div className="detail__result__container">
         <div className="detail__result__info">
           <DataDetailCar />

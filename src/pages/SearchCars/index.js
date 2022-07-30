@@ -25,6 +25,7 @@ const SearchCars = () => {
   const handleSearch = () => {
     const newArr = data.filter((e) => e.name === name);
     setFdata(newArr);
+    setNotFound(true);
   };
 
   useEffect(() => {
@@ -40,18 +41,18 @@ const SearchCars = () => {
     ButtonPilih,
     handleChangeName,
     handleSearch,
-    notFound,
+    // notFound,
   };
 
-  console.log("  🔸-> data", data);
-  console.log("  🔸-> fdata", fdata);
+  // console.log("  🔸-> data", data);
+  // console.log("  🔸-> fdata", fdata);
 
   return (
     <div>
       <Navigation {...props} />
       <Hero />
       <SearchBar {...props} />
-      {/* {!notFound && <h1>Data tidak ditemukan</h1>} */}
+      {!!notFound && <h1>Data tidak ditemukan</h1>}
       <SearchResult data={!fdata.length ? data : fdata} {...props} />
       <Footer {...props} />
     </div>

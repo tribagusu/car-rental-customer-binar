@@ -52,6 +52,14 @@
   font-weight: var(--fw-regular);
 }
 
+.arrow-button > * {
+  cursor: pointer;
+}
+
+.arrow-button-right {
+  transform: rotate(180deg);
+}
+
 /* _ Responsive Breakpoints */
 @media screen and (max-width: 600px) {
   .carousel__card {

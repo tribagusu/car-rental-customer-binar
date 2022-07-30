@@ -2,6 +2,7 @@ import DataDetailCar from "../../const/DataDetailCar";
 import { Link } from "react-router-dom";
 import "./style.css";
 import noImage from "../../assets/no-image-available.png";
+import NumberFormatter from "../../const/NumberFormatter";
 
 const DetailResult = (props) => {
   const { car, ButtonBack } = props;
@@ -33,7 +34,7 @@ const DetailResult = (props) => {
                 <p>{car.category}</p>
                 <div className="detail__result__total-price">
                   <p>Total</p>
-                  <p>Rp {car.price}</p>
+                  <p>{NumberFormatter(car.price)}</p>
                 </div>
               </div>
             ) : (

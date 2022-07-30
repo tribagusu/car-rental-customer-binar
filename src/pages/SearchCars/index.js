@@ -11,22 +11,20 @@ import axios from "axios";
 const SearchCars = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
-  // console.log("  🔸-> name", name);
+  const [fdata, setFdata] = useState([]);
+  const [notFound, setNotFound] = useState(false);
+
   const handleChangeName = (e) => {
     setName(e.target.value);
+    if (!e.target.value.length) {
+      setFdata([]);
+      setNotFound(false);
+    }
   };
 
   const handleSearch = () => {
-    const newArr = data.filter((data) => data.name === name);
-    setData(newArr);
-
-    // const payload = {
-    //   name: name,
-    // };
-    // axios
-    //   .post("https://bootcamp-rent-car.herokuapp.com/admin/car", payload)
-    //   .then((res) => console.log(res))
-    //   .catch((err) => console.log(err));
+    const newArr = data.filter((e) => e.name === name);
+    setFdata(newArr);
   };
 
   useEffect(() => {
@@ -39,21 +37,33 @@ const SearchCars = () => {
   const props = {
     socialMediaLogo,
     NavMenu,
-    data,
     ButtonPilih,
     handleChangeName,
     handleSearch,
+    notFound,
   };
+
+  console.log("  🔸-> data", data);
+  console.log("  🔸-> fdata", fdata);
 
   return (
     <div>
       <Navigation {...props} />
       <Hero />
       <SearchBar {...props} />
-      <SearchResult {...props} />
+      {/* {!notFound && <h1>Data tidak ditemukan</h1>} */}
+      <SearchResult data={!fdata.length ? data : fdata} {...props} />
       <Footer {...props} />
     </div>
   );
 };
 
 export default SearchCars;
+
+// const payload = {
+//   name: name,
+// };
+// axios
+//   .post("https://bootcamp-rent-car.herokuapp.com/admin/car", payload)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));

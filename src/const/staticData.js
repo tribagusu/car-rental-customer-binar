@@ -10,6 +10,7 @@ import {
   faCheck,
   faAngleDown,
   faEnvelope,
+  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -29,6 +30,11 @@ const ButtonSewa = [<button className="button">Mulai Sewa Mobil</button>];
 const ButtonCari = [<button className="button">Cari Mobil</button>];
 const ButtonPilih = [<button className="button">Pilih Mobil</button>];
 const ButtonEdit = [<button className="button">Edit</button>];
+const ButtonBack = [
+  <button className="button">
+    <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+  </button>,
+];
 
 // # icons
 const checkIcon = [<FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>];
@@ -178,4 +184,5 @@ export {
   ButtonCari,
   ButtonPilih,
   ButtonEdit,
+  ButtonBack,
 };

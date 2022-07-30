@@ -4,14 +4,20 @@ import "./style.css";
 import noImage from "../../assets/no-image-available.png";
 
 const DetailResult = (props) => {
-  const { car, ButtonCari } = props;
+  const { car, ButtonBack } = props;
   return (
     <section className="detail__section">
       <div className="detail__hero"></div>
+      <div className="detail__result__button-cari-mobil">
+        <Link to="/carimobil">
+          <button>{ButtonBack}</button>
+        </Link>
+      </div>
       <div className="detail__result__container">
         <div className="detail__result__info">
           <DataDetailCar />
         </div>
+
         <div className="detail__result__car">
           <div>
             {!!Object.keys(car).length ? (
@@ -33,11 +39,6 @@ const DetailResult = (props) => {
             ) : (
               <p>loading...</p>
             )}
-          </div>
-          <div className="detail__result__button-cari-mobil">
-            <Link to="/carimobil">
-              <button>{ButtonCari}</button>
-            </Link>
           </div>
         </div>
       </div>

@@ -11,6 +11,13 @@
   margin: 0 auto 40px;
 }
 
+.carousel__container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  background: tan;
+}
+
 .carousel__card {
   width: 650px;
   height: 270px;
@@ -52,12 +59,34 @@
   font-weight: var(--fw-regular);
 }
 
-.arrow-button > * {
-  cursor: pointer;
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
+.arrow-button-left,
 .arrow-button-right {
-  transform: rotate(180deg);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.arrow-button button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--clr-neutral-300);
+}
+
+.arrow-button button:hover {
+  background: var(--clr-accent);
+  color: var(--clr-neutral-100);
+  border: none;
 }
 
 /* _ Responsive Breakpoints */

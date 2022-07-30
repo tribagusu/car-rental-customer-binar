@@ -17,6 +17,8 @@ import {
   NavMenu,
   ButtonSewa,
   strengthCard,
+  angleLeftIcon,
+  angleRightIcon,
 } from "../../const/staticData";
 
 const Home = () => {
@@ -29,6 +31,8 @@ const Home = () => {
     NavMenu,
     ButtonSewa,
     strengthCard,
+    angleLeftIcon,
+    angleRightIcon,
   };
 
   return (

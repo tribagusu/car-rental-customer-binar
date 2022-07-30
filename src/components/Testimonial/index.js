@@ -1,12 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import arrowButton from "../../assets/Left-arrow-button.png";
 import "./style.css";
 
 const Testimonial = (props) => {
-  const { dataTestimoni } = props;
+  const { dataTestimoni, angleLeftIcon, angleRightIcon } = props;
   const [sliderRef, setSliderRef] = useState(null);
   const settings = {
     centerMode: true,
@@ -49,7 +48,11 @@ const Testimonial = (props) => {
       <h2>Testimonial</h2>
       <p>Berbagai review positif dari para pelanggan kami</p>
       <div className="carousel__container">
-        <Slider ref={setSliderRef} {...settings}>
+        <Slider
+          // className="carousel__card__container"
+          ref={setSliderRef}
+          {...settings}
+        >
           {dataTestimoni.map((item) => (
             <div>
               <div className="carousel__card">
@@ -66,12 +69,12 @@ const Testimonial = (props) => {
           ))}
         </Slider>
         <div className="arrow-button">
-          <button onClick={sliderRef?.slickPrev} className="arrow-button-left">
-            <img src={arrowButton} />
-          </button>
-          <button onClick={sliderRef?.slickNext} className="arrow-button-right">
-            <img src={arrowButton} />
-          </button>
+          <div className="arrow-button-left" onClick={sliderRef?.slickPrev}>
+            <button>{angleLeftIcon}</button>
+          </div>
+          <div onClick={sliderRef?.slickNext} className="arrow-button-right">
+            <button>{angleRightIcon}</button>
+          </div>
         </div>
       </div>
     </section>

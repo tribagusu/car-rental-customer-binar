@@ -8,21 +8,21 @@ const Testimonial = (props) => {
   const { dataTestimoni, angleLeftIcon, angleRightIcon } = props;
   const [sliderRef, setSliderRef] = useState(null);
   const settings = {
-    centerMode: true,
     dots: false,
     infinite: true,
+    // className: "center",
+    // centerMode: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2.3,
     slidesToScroll: 1,
     initialSlide: 0,
+
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
@@ -30,7 +30,6 @@ const Testimonial = (props) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
         },
       },
       {
@@ -48,11 +47,7 @@ const Testimonial = (props) => {
       <h2>Testimonial</h2>
       <p>Berbagai review positif dari para pelanggan kami</p>
       <div className="carousel__container">
-        <Slider
-          // className="carousel__card__container"
-          ref={setSliderRef}
-          {...settings}
-        >
+        <Slider ref={setSliderRef} {...settings}>
           {dataTestimoni.map((item) => (
             <div>
               <div className="carousel__card">

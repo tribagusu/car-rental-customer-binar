@@ -125,30 +125,22 @@ const dataTestimoni = [
       "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
     name: "John Dee 32, Bromo",
   },
-  {
-    id: 4,
-    imgsrc: testiImage1,
-    icon: [starsIcon5],
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
-    name: "John Dee 32, Bromo",
-  },
-  {
-    id: 5,
-    imgsrc: testiImage2,
-    icon: [starsIcon5],
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
-    name: "John Dee 32, Bromo",
-  },
-  {
-    id: 6,
-    imgsrc: testiImage3,
-    icon: [starsIcon5],
-    comment:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
-    name: "John Dee 32, Bromo",
-  },
+  // {
+  //   id: 4,
+  //   imgsrc: testiImage1,
+  //   icon: [starsIcon5],
+  //   comment:
+  //     "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
+  //   name: "John Dee 32, Bromo",
+  // },
+  // {
+  //   id: 5,
+  //   imgsrc: testiImage2,
+  //   icon: [starsIcon5],
+  //   comment:
+  //     "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
+  //   name: "John Dee 32, Bromo",
+  // },
 ];
 
 // # frequently asked questions

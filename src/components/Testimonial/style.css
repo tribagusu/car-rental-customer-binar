@@ -14,8 +14,7 @@
 .carousel__container {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  background: tan;
+  overflow: hidden;
 }
 
 .carousel__card {
@@ -25,10 +24,9 @@
   border-radius: var(--bora-lg);
   padding: 69px 32px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .carousel__card__left {
@@ -95,6 +93,7 @@
     flex-direction: column;
     width: 328px;
     height: 392px;
+    margin: auto;
   }
 
   .carousel__card__left {

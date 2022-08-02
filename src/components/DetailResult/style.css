@@ -50,20 +50,19 @@
   justify-content: space-between;
 }
 
-/* .detail__result__button-cari-mobil {
+.detail__result__button-cari-mobil {
   display: flex;
-  width: 20px;
-  margin-top: 10px;
-  padding: 0;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 330px;
+  top: 250px;
 }
 
 .detail__result__button-cari-mobil button {
-  width: 200px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--bora-sm);
 }
 
 .detail__result__button-cari-mobil button:hover {
   background: transparent;
-} */
+}

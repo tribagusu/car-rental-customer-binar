@@ -12,6 +12,7 @@ import {
   faEnvelope,
   faAngleLeft,
   faAngleRight,
+  faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -40,15 +41,12 @@ const ButtonBack = [
 // # icons
 const checkIcon = [<FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>];
 const checkIcon5 = Array(5).fill(checkIcon);
-
 const starsIcon = [<FontAwesomeIcon icon={faStar}></FontAwesomeIcon>];
 const starsIcon5 = Array(5).fill(starsIcon);
-
 const angleDownIcon = <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>;
-
 const angleLeftIcon = <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>;
-
 const angleRightIcon = <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>;
+const userGroupIcon = <FontAwesomeIcon icon={faUserGroup}></FontAwesomeIcon>;
 
 // # navigation
 const NavMenu = [
@@ -208,4 +206,5 @@ export {
   ButtonBack,
   angleLeftIcon,
   angleRightIcon,
+  userGroupIcon,
 };

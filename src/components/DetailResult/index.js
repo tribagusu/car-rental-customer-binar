@@ -5,7 +5,7 @@ import noImage from "../../assets/no-image-available.png";
 import NumberFormat from "react-number-format";
 
 const DetailResult = (props) => {
-  const { car, ButtonBack } = props;
+  const { car, ButtonBack, userGroupIcon } = props;
   return (
     <section className="detail__section">
       <div className="detail__hero"></div>
@@ -19,37 +19,32 @@ const DetailResult = (props) => {
           <DataDetailCar />
         </div>
 
-        <div className="detail__result__car">
-          <div>
-            {!!Object.keys(car).length ? (
-              <div>
-                <div className="detail__result__car-image">
-                  {!!car.image ? (
-                    <img src={car.image} />
-                  ) : (
-                    <img src={noImage} />
-                  )}
-                </div>
-                <h1>{car.name}</h1>
-                <p>{car.category}</p>
-                <div className="detail__result__total-price">
-                  <p>Total</p>
-                  <p>
-                    Rp{" "}
-                    {
-                      <NumberFormat
-                        value={car.price}
-                        decimalSeparator=","
-                        thousandSeparator="."
-                      />
-                    }
-                  </p>
-                </div>
+        <div>
+          {!!Object.keys(car).length ? (
+            <div className="detail__result__car">
+              <div className="detail__result__car-image">
+                {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
               </div>
-            ) : (
-              <p>loading...</p>
-            )}
-          </div>
+              <h1>{car.name}</h1>
+
+              <p>
+                {userGroupIcon} {car.category}
+              </p>
+              <div className="detail__result__total-price">
+                <p>Total</p>
+                <p>
+                  Rp{" "}
+                  <NumberFormat
+                    value={car.price}
+                    decimalSeparator=","
+                    thousandSeparator="."
+                  />
+                </p>
+              </div>
+            </div>
+          ) : (
+            <p>loading...</p>
+          )}
         </div>
       </div>
     </section>

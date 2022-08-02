@@ -44,9 +44,6 @@ const SearchCars = () => {
     // notFound,
   };
 
-  // console.log("  🔸-> data", data);
-  // console.log("  🔸-> fdata", fdata);
-
   return (
     <div>
       <Navigation {...props} />
@@ -60,11 +57,3 @@ const SearchCars = () => {
 };
 
 export default SearchCars;
-
-// const payload = {
-//   name: name,
-// };
-// axios
-//   .post("https://bootcamp-rent-car.herokuapp.com/admin/car", payload)
-//   .then((res) => console.log(res))
-//   .catch((err) => console.log(err));

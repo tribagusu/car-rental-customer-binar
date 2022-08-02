@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navigation from "../../components/Navigation";
 import DetailResult from "../../components/DetailResult";
-import { socialMediaLogo, NavMenu, ButtonBack } from "../../const/staticData";
+import {
+  socialMediaLogo,
+  NavMenu,
+  ButtonBack,
+  userGroupIcon,
+} from "../../const/staticData";
 import Footer from "../../components/Footer";
 
 const Car = () => {
@@ -24,6 +29,7 @@ const Car = () => {
     socialMediaLogo,
     NavMenu,
     ButtonBack,
+    userGroupIcon,
   };
   return (
     <div>

@@ -29,6 +29,7 @@
   border-radius: var(--bora-lg);
   padding: 2rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .detail__result__car {
@@ -53,14 +54,13 @@
 .detail__result__button-cari-mobil {
   display: flex;
   position: absolute;
-  left: 330px;
-  top: 250px;
+  left: -50px;
+  top: 200px;
 }
 
 .detail__result__button-cari-mobil button {
-  width: 40px;
-  height: 40px;
   border-radius: var(--bora-sm);
+  margin: auto;
 }
 
 .detail__result__button-cari-mobil button:hover {

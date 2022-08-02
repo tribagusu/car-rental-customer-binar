@@ -5,18 +5,19 @@ import noImage from "../../assets/no-image-available.png";
 import NumberFormat from "react-number-format";
 
 const DetailResult = (props) => {
-  const { car, ButtonBack, userGroupIcon } = props;
+  const { car, userGroupIcon, angleLeftIcon } = props;
   return (
     <section className="detail__section">
       <div className="detail__hero"></div>
-      <div className="detail__result__button-cari-mobil">
-        <Link to="/carimobil">
-          <button>{ButtonBack}</button>
-        </Link>
-      </div>
+
       <div className="detail__result__container">
         <div className="detail__result__info">
           <DataDetailCar />
+          <div>
+            <Link to="/carimobil" className="detail__result__button-cari-mobil">
+              <button className="button">{angleLeftIcon}</button>
+            </Link>
+          </div>
         </div>
 
         <div>

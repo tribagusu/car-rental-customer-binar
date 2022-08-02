@@ -6,8 +6,8 @@ import DetailResult from "../../components/DetailResult";
 import {
   socialMediaLogo,
   NavMenu,
-  ButtonBack,
   userGroupIcon,
+  angleLeftIcon,
 } from "../../const/staticData";
 import Footer from "../../components/Footer";
 
@@ -28,8 +28,8 @@ const Car = () => {
     car,
     socialMediaLogo,
     NavMenu,
-    ButtonBack,
     userGroupIcon,
+    angleLeftIcon,
   };
   return (
     <div>

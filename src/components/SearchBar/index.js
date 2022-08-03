@@ -2,22 +2,23 @@ import "./style.css";
 import { ButtonCari } from "../../const/staticData";
 
 const SearchBar = (props) => {
-  const { handleChangeName, handleSearch } = props;
+  const { handleChangeName, handleSearch, name } = props;
   return (
     <div className="search-bar__section1">
       <div className="search-bar__section2">
         <div className="search-bar__container">
           <aside>
-            <div className="search-bar__inputs">
-              <div className="input-name">
+            <form onSubmit={handleSearch} className="search-bar__inputs">
+              <div>
                 <h4>Nama Mobil</h4>
                 <input
-                  onChange={(e) => handleChangeName(e)}
                   type="text"
                   placeholder="Ketik nama/tipe mobil"
+                  onChange={(e) => handleChangeName(e)}
+                  value={name}
                 />
               </div>
-              <div className="input-category">
+              <div>
                 <h4>Kategori</h4>
                 <input
                   type="text"
@@ -25,11 +26,11 @@ const SearchBar = (props) => {
                   disabled
                 />
               </div>
-              <div className="input-price">
+              <div>
                 <h4>Harga</h4>
                 <input type="text" placeholder="Masukkan Harga Sewa" disabled />
               </div>
-              <div className="input-status">
+              <div>
                 <h4>Status</h4>
                 <select name="status" id="status">
                   <option value="" disabled selected>
@@ -40,9 +41,9 @@ const SearchBar = (props) => {
                 </select>
               </div>
               <div className="search-bar__button">
-                <button onClick={handleSearch}>{ButtonCari}</button>
+                <button>{ButtonCari}</button>
               </div>
-            </div>
+            </form>
           </aside>
         </div>
       </div>

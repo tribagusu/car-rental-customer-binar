@@ -10,7 +10,7 @@ const SearchResult = (props) => {
     <div className="search-result__section">
       <div className="search-result__container">
         {!!data.length &&
-          data.map((item) => (
+          data.map((item, index) => (
             <div className="search-result__cards">
               <div>
                 {!!item.image ? (

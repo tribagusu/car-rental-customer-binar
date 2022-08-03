@@ -22,7 +22,8 @@ const SearchCars = () => {
     }
   };
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     const newArr = data.filter((e) => e.name === name);
     setFdata(newArr);
     // setNotFound(false);
@@ -41,8 +42,10 @@ const SearchCars = () => {
     ButtonPilih,
     handleChangeName,
     handleSearch,
+    name,
     // notFound,
   };
+  console.log("  🔸-> name", name);
 
   return (
     <div>

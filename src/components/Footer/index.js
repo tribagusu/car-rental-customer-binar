@@ -4,15 +4,15 @@ const Footer = (props) => {
   const { socialMediaLogo, NavMenu } = props;
   return (
     <footer>
-      <div class="container">
-        <div class="footer__columns">
-          <div class="footer__address">
+      <div className="container">
+        <div className="footer__columns">
+          <div className="footer__address">
             <h4>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</h4>
             <p>binarcarrental@gmail.com</p>
             <p>081-233-334-808</p>
           </div>
 
-          <div class="footer__navigation">
+          <div className="footer__navigation">
             <ul>
               {NavMenu.map((item) => (
                 <li>
@@ -22,7 +22,7 @@ const Footer = (props) => {
             </ul>
           </div>
 
-          <div class="footer__social-media">
+          <div className="footer__social-media">
             <h4>Connect with us</h4>
             <ul>
               {socialMediaLogo.map((item) => (
@@ -33,7 +33,7 @@ const Footer = (props) => {
             </ul>
           </div>
 
-          <div class="copyright">
+          <div className="copyright">
             <h4>Copyright Binar 2022</h4>
             <a href="#">
               <img src="" alt="Binar Car Rental" />

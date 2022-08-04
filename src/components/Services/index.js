@@ -28,8 +28,8 @@ const Services = (props) => {
               </div>
               <div>
                 {strList.map((item) => (
-                  <ul>
-                    <li>{item}</li>
+                  <ul key={item.id}>
+                    <li>{item.service}</li>
                   </ul>
                 ))}
               </div>

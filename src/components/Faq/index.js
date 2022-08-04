@@ -21,6 +21,7 @@ const Faq = (props) => {
           <div className="faq__column__right">
             {faq.map((item) => (
               <Accordion
+                key={item.id}
                 className="faq"
                 // expanded={selected === 1}
                 // onChange={handleSelected(1)}

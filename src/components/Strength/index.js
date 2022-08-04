@@ -11,7 +11,7 @@ const Strength = (props) => {
       <div className="strength__cards__container">
         <div className="strength__cards">
           {strengthCard.map((item) => (
-            <div className="card">
+            <div key={item.id} className="card">
               <img src={item.icon} alt="" />
               <h3>{item.title}</h3>
               <p>{item.detail}</p>

@@ -10,20 +10,16 @@ const SearchResult = (props) => {
     <div className="search-result__section">
       <div className="search-result__container">
         {!!data.length &&
-          data.map((item) => (
-            <div key={item} className="search-result__cards">
+          data.map((car) => (
+            <div key={car.id} className="search-result__cards">
               <div>
-                {!!item.image ? (
-                  <img src={item.image} />
-                ) : (
-                  <img src={noImage} />
-                )}
+                {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
                 <div className="search-result__cards__info">
-                  {!!item.name ? <h1>{item.name}</h1> : <h1>not available</h1>}
+                  {!!car.name ? <h1>{car.name}</h1> : <h1>not available</h1>}
                   <p>
                     Rp{" "}
                     <NumberFormat
-                      value={item.price}
+                      value={car.price}
                       decimalSeparator=","
                       thousandSeparator="."
                     />{" "}
@@ -35,7 +31,7 @@ const SearchResult = (props) => {
                   </p>
                 </div>
                 <div className="search-result__cards__button">
-                  <Link to={`/detailmobil/${item.id}`}>{ButtonPilih}</Link>
+                  <Link to={`/detailmobil/${car.id}`}>{ButtonPilih}</Link>
                 </div>
               </div>
             </div>

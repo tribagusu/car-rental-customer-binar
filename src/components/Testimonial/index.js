@@ -49,7 +49,7 @@ const Testimonial = (props) => {
       <div className="carousel__container">
         <Slider ref={setSliderRef} {...settings}>
           {dataTestimoni.map((item) => (
-            <div>
+            <div key={item.id}>
               <div className="carousel__card">
                 <div className="carousel__card__left">
                   <img src={item.imgsrc} alt="" />

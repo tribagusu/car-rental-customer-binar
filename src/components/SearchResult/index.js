@@ -10,8 +10,8 @@ const SearchResult = (props) => {
     <div className="search-result__section">
       <div className="search-result__container">
         {!!data.length &&
-          data.map((item, index) => (
-            <div className="search-result__cards">
+          data.map((item) => (
+            <div key={item} className="search-result__cards">
               <div>
                 {!!item.image ? (
                   <img src={item.image} />

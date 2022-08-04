@@ -14,7 +14,7 @@ const SearchBar = (props) => {
                 <input
                   type="text"
                   placeholder="Ketik nama/tipe mobil"
-                  onChange={(e) => handleChangeName(e)}
+                  onChange={handleChangeName}
                   value={name}
                 />
               </div>
@@ -32,10 +32,7 @@ const SearchBar = (props) => {
               </div>
               <div>
                 <h4>Status</h4>
-                <select name="status" id="status">
-                  <option value="" disabled selected>
-                    Status mobil
-                  </option>
+                <select name="status" id="status" defaultValue={"status mobil"}>
                   <option value="true">True</option>
                   <option value="false">False</option>
                 </select>

@@ -45,7 +45,6 @@ const SearchCars = () => {
     name,
     // notFound,
   };
-  console.log("  🔸-> name", name);
 
   return (
     <div>

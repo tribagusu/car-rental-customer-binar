@@ -3,7 +3,8 @@ import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
 import SearchBar from "../../components/SearchBar";
 import SearchResult from "../../components/SearchResult";
-import { socialMediaLogo, NavMenu, ButtonPilih } from "../../const/staticData";
+import { NavMenu } from "../../components/Navigation/data";
+import { socialMediaLogo, ButtonPilih } from "../../const/staticData";
 
 import { useEffect, useState } from "react";
 import axios from "axios";

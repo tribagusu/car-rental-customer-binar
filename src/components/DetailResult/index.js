@@ -1,4 +1,4 @@
-import DataDetailCar from "../../const/DataDetailCar";
+import DataDetailCar from "./data";
 import { Link } from "react-router-dom";
 import "./style.css";
 import noImage from "../../assets/no-image-available.png";

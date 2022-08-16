@@ -1,4 +1,5 @@
 import { useState, Fragment, default as React } from "react";
+import { Link } from "react-router-dom";
 import {
   Drawer,
   IconButton,
@@ -8,8 +9,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { NavMenu } from "../../const/staticData";
-import { Link } from "react-router-dom";
+import { NavMenu } from "../Navigation/data";
 
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);

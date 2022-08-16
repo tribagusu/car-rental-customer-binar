@@ -7,23 +7,23 @@ import Testimonial from "../../components/Testimonial";
 import CallToAction from "../../components/CallToAction";
 import Faq from "../../components/Faq";
 import Footer from "../../components/Footer";
+import { servicesList } from "../../components/Services/data";
+import { strengthCard } from "../../components/Strength/data";
+import { faq } from "../../components/Faq/data";
+import { dataTestimoni } from "../../components/Testimonial/data";
+import { NavMenu } from "../../components/Navigation/data";
 
 import {
-  strList,
   checkIcon5,
-  dataTestimoni,
-  faq,
   socialMediaLogo,
-  NavMenu,
   ButtonSewa,
-  strengthCard,
   angleLeftIcon,
   angleRightIcon,
 } from "../../const/staticData";
 
 const Home = () => {
   const props = {
-    strList,
+    servicesList,
     checkIcon5,
     dataTestimoni,
     faq,

@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navigation from "../../components/Navigation";
 import DetailResult from "../../components/DetailResult";
+import { NavMenu } from "../../components/Navigation/data";
 import {
   socialMediaLogo,
-  NavMenu,
   userGroupIcon,
   angleLeftIcon,
 } from "../../const/staticData";

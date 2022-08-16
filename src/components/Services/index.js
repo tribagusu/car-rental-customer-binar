@@ -2,7 +2,7 @@ import "./style.css";
 import serviceImg from "../../assets/img_service.png";
 
 const Services = (props) => {
-  const { strList, checkIcon5 } = props;
+  const { servicesList, checkIcon5 } = props;
   return (
     <section id="services">
       <div className="container services__container">
@@ -27,7 +27,7 @@ const Services = (props) => {
                 ))}
               </div>
               <div>
-                {strList.map((item) => (
+                {servicesList.map((item) => (
                   <ul key={item.id}>
                     <li>{item.service}</li>
                   </ul>

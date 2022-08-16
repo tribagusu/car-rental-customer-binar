@@ -132,22 +132,3 @@ a {
 a:hover {
   color: var(--clr-primary);
 }
-
-/* _Responsive Breakpoints */
-/* # tablet */
-@media screen and (max-width: 1024px) {
-  .container {
-    width: var(--container-md);
-  }
-
-  section {
-    margin-top: 70px;
-  }
-}
-
-/* # phone */
-@media screen and (max-width: 600px) {
-  .container {
-    width: var(--container-sm);
-  }
-}

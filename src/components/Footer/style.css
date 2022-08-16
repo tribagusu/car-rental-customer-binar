@@ -50,7 +50,7 @@ footer {
   margin-bottom: 16px;
 }
 
-/* _ Responsive Breakpoints */
+/*_ Responsive Breakpoints */
 @media screen and (max-width: 600px) {
   section,
   footer {

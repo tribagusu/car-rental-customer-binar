@@ -32,7 +32,7 @@ const angleLeftIcon = <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>;
 const angleRightIcon = <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>;
 const userGroupIcon = <FontAwesomeIcon icon={faUserGroup}></FontAwesomeIcon>;
 
-// # footer socialmedia logo
+//# socialmedia logo
 const socialMediaLogo = [
   <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>,
   <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>,
@@ -40,8 +40,6 @@ const socialMediaLogo = [
   <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>,
   <FontAwesomeIcon icon={faTwitch}></FontAwesomeIcon>,
 ];
-
-// _ export
 
 export {
   checkIcon5,

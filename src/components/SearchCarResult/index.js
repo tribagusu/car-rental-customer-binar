@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import noImage from "../../assets/no-image-available.png";
 import NumberFormat from "react-number-format";
 
-const SearchResult = (props) => {
+const SearchCarResult = (props) => {
   const { data, ButtonPilih } = props;
 
   return (
@@ -41,4 +41,4 @@ const SearchResult = (props) => {
   );
 };
 
-export default SearchResult;
+export default SearchCarResult;

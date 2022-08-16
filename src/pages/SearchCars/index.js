@@ -2,7 +2,7 @@ import Navigation from "../../components/Navigation";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
 import SearchBar from "../../components/SearchBar";
-import SearchResult from "../../components/SearchResult";
+import SearchCarResult from "../../components/SearchCarResult";
 import { NavMenu } from "../../components/Navigation/data";
 import { socialMediaLogo, ButtonPilih } from "../../const/staticData";
 
@@ -53,7 +53,7 @@ const SearchCars = () => {
       <Hero />
       <SearchBar {...props} />
       {/* {!!notFound && <h1>Data tidak ditemukan</h1>} */}
-      <SearchResult data={!fdata.length ? data : fdata} {...props} />
+      <SearchCarResult data={!fdata.length ? data : fdata} {...props} />
       <Footer {...props} />
     </div>
   );

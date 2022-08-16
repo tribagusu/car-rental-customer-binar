@@ -4,7 +4,7 @@ import "./style.css";
 import noImage from "../../assets/no-image-available.png";
 import NumberFormat from "react-number-format";
 
-const DetailResult = (props) => {
+const DetailCarResult = (props) => {
   const { car, userGroupIcon, angleLeftIcon } = props;
   return (
     <section className="detail__section">
@@ -52,4 +52,4 @@ const DetailResult = (props) => {
   );
 };
 
-export default DetailResult;
+export default DetailCarResult;

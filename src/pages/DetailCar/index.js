@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navigation from "../../components/Navigation";
-import DetailResult from "../../components/DetailResult";
+import DetailCarResult from "../../components/DetailCarResult";
 import { NavMenu } from "../../components/Navigation/data";
 import {
   socialMediaLogo,
@@ -34,7 +34,7 @@ const Car = () => {
   return (
     <div>
       <Navigation {...props} />
-      <DetailResult {...props} />
+      <DetailCarResult {...props} />
       <Footer {...props} />
     </div>
   );

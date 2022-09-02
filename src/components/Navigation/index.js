@@ -26,7 +26,7 @@ const Navigation = (props) => {
             </>
           ) : (
             <>
-              <div className="primary__header" id="nav">
+              <nav className="primary__header" id="nav">
                 <div className="container primary__container">
                   <Link to="/" className="logo-big-screen">
                     <a href="#hero">Binar Car Rental</a>
@@ -39,7 +39,7 @@ const Navigation = (props) => {
                     </ul>
                   </nav>
                 </div>
-              </div>
+              </nav>
             </>
           )}
         </Toolbar>

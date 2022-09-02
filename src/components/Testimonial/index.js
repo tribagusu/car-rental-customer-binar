@@ -10,8 +10,6 @@ const Testimonial = (props) => {
   const settings = {
     dots: false,
     infinite: true,
-    // className: "center",
-    // centerMode: true,
     speed: 500,
     slidesToShow: 2.3,
     slidesToScroll: 1,

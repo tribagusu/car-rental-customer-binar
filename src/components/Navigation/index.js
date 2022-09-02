@@ -1,13 +1,13 @@
-import "./style.css";
-import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material";
-import { Link } from "react-router-dom";
-import { Fragment, default as React } from "react";
-import DrawerComp from "../Drawer";
+import "./style.css"
+import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material"
+import { Link } from "react-router-dom"
+import { Fragment, default as React } from "react"
+import DrawerComp from "../Drawer"
 
 const Navigation = (props) => {
-  const { NavMenu } = props;
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const { NavMenu } = props
+  const theme = useTheme()
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <Fragment>
       <AppBar
@@ -36,6 +36,9 @@ const Navigation = (props) => {
                       {NavMenu.map((item) => (
                         <li>{item}</li>
                       ))}
+                      <Link to="/login">
+                        <button className="button">Login</button>
+                      </Link>
                     </ul>
                   </nav>
                 </div>
@@ -45,7 +48,7 @@ const Navigation = (props) => {
         </Toolbar>
       </AppBar>
     </Fragment>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

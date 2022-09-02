@@ -1,0 +1,78 @@
+.signin {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/*_ left */
+.signin__left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 900px;
+}
+
+.signin__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.signin__container > * {
+  margin-bottom: 30px;
+}
+
+.signin__logo,
+.signin__left h2 {
+  align-self: flex-start;
+}
+
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+}
+
+.signin__form > * {
+  margin-bottom: 20px;
+}
+
+.signin__form input {
+  border: 1px solid var(--clr-neutral-200);
+  border-radius: var(--bora-sm);
+  width: 370px;
+  font-weight: var(--fw-light);
+  padding: 10px;
+  background: var(--clr-neutral-100);
+}
+
+.signin__label {
+  margin-bottom: 5px;
+}
+
+.signin button {
+  margin-top: 20px;
+  background: var(--clr-primary);
+}
+
+.signin button:hover {
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+}
+
+.signin__signup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/*_ right */
+.signin__right {
+  display: flex;
+  width: 720px;
+  height: 100%;
+  flex-direction: column;
+  background: var(--clr-primary);
+}

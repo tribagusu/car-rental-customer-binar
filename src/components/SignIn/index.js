@@ -1,8 +1,10 @@
-import "./style.css"
 import React from "react"
+import "./style.css"
 import { Link } from "react-router-dom"
 
-const SignIn = () => {
+const SignIn = (props) => {
+  const { handleEmail, handlePassword, email, password, handleSubmit } = props
+
   return (
     <>
       <div className="signin">
@@ -12,24 +14,28 @@ const SignIn = () => {
               <img src="" alt="BCR" />
             </div>
             <h2>Welcome Back!</h2>
-            <form className="signin__form">
+            <form onSubmit={handleSubmit} className="signin__form">
               <div className="signin__email">
                 <div className="signin__label">
                   <label>Email</label>
                 </div>
-                <input type="text" />
+                <input onChange={handleEmail} value={email} type="text" />
               </div>
               <div className="signin__password">
                 <div className="signin__label">
                   <label>Password</label>
                 </div>
-                <input type="password" />
+                <input
+                  onChange={handlePassword}
+                  value={password}
+                  type="password"
+                />
               </div>
               <button className="button">Sign In</button>
             </form>
             <div className="signin__signup">
               <p>Don't have an account?</p>
-              <Link to="/signup">Sign Up for free</Link>
+              <Link to="/registration">Sign Up for free</Link>
             </div>
           </div>
         </div>

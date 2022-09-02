@@ -3,16 +3,12 @@ import axios from "axios"
 
 export const authAction = (payload) => {
   return (dispatch) => {
-    axios
-      .post(
-        "https://bootcamp-rent-car.herokuapp.com/customer/auth/login",
-        payload
-      )
-      .then((res) => {
-        dispatch({
-          type: TYPES.SIGNIN,
-          payload: res.data.data,
-        })
+    axios.post("https://reqres.in/api/register", payload).then((res) => {
+      console.log(res.data.token)
+      dispatch({
+        type: TYPES.SIGNIN,
+        payload: res.data.token,
       })
+    })
   }
 }

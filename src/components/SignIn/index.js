@@ -3,7 +3,8 @@ import "./style.css"
 import { Link } from "react-router-dom"
 
 const SignIn = (props) => {
-  const { handleEmail, handlePassword, email, password, handleSubmit } = props
+  const { handleEmail, handlePassword, email, password, handleSubmit, auth } =
+    props
 
   return (
     <>
@@ -48,6 +49,7 @@ const SignIn = (props) => {
           </div>
         </div>
       </div>
+      <p>{auth}</p>
     </>
   )
 }

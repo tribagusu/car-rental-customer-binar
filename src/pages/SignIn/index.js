@@ -1,10 +1,11 @@
-import React from "react"
 import "./style.css"
+import React from "react"
+import { Link } from "react-router-dom"
 
 const SignIn = () => {
   return (
     <>
-      <div className="container signin">
+      <div className="signin">
         <div className="signin__left">
           <div className="signin__container">
             <div className="signin__logo">
@@ -28,7 +29,7 @@ const SignIn = () => {
             </form>
             <div className="signin__signup">
               <p>Don't have an account?</p>
-              <a href="/">Sign Up for free</a>
+              <Link to="/signup">Sign Up for free</Link>
             </div>
           </div>
         </div>

@@ -1,24 +1,24 @@
 .signin {
   display: flex;
-  justify-content: space-between;
-  /* width: 100%; */
-  background: tan;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 /*_ left */
 .signin__left {
   display: flex;
   flex-direction: column;
-  min-width: 720px;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 900px;
 }
 
 .signin__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .signin__container > * {
@@ -55,6 +55,12 @@
 
 .signin button {
   margin-top: 20px;
+  background: var(--clr-primary);
+}
+
+.signin button:hover {
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
 }
 
 .signin__signup {
@@ -65,7 +71,8 @@
 /*_ right */
 .signin__right {
   display: flex;
-  min-width: 720px;
+  width: 720px;
+  height: 100%;
   flex-direction: column;
   background: var(--clr-primary);
 }

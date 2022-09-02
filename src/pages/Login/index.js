@@ -6,15 +6,11 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const Login = () => {
-  const { auth } = useSelector((state) => state.authReducer)
-  const dispatch = useDispatch()
-
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  // const [login, setLogin] = useState("")
-  // console.log(email, password)
 
-  // console.log("  🔸-> auth", authReducer)
+  const { token } = useSelector((state) => state.authReducer)
+  const dispatch = useDispatch()
 
   const handleEmail = (e) => {
     setEmail(e.target.value)
@@ -25,8 +21,7 @@ const Login = () => {
   }
 
   const handleSubmit = (e) => {
-    console.log(auth)
-    e.PreventDefault()
+    e.preventDefault()
     const payload = {
       email,
       password,
@@ -75,7 +70,7 @@ const Login = () => {
               <p>Don't have an account?</p>
               <Link to="/registration">Sign Up for free</Link>
             </div>
-            <p>token {auth}</p>
+            <p>token {token}</p>
           </div>
         </div>
         <div className="signin__right">

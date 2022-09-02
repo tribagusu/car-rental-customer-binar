@@ -1,14 +1,14 @@
 import TYPES from "../types"
 
 const initialState = {
-  auth: "",
+  token: "",
 }
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case TYPES.SIGNIN:
       return {
-        auth: action.payload,
+        token: action.payload,
       }
     default:
       return state

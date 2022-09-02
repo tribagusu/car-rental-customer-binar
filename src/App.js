@@ -1,4 +1,3 @@
-import "./App.css"
 import { Routes, Route } from "react-router-dom"
 import DetailCar from "./pages/DetailCar"
 import Home from "./pages/Home"

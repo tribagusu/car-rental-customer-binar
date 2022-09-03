@@ -1,8 +1,9 @@
 import { useDispatch } from "react-redux"
 import { handleLogin } from "../../redux/actions/authAction"
 import { useState } from "react"
-import SignIn from "../../components/SignIn"
 import { useNavigate } from "react-router-dom"
+import SignIn from "../../components/SignIn"
+import swal from "sweetalert"
 
 const Login = () => {
   const [email, setEmail] = useState("")
@@ -26,6 +27,7 @@ const Login = () => {
       password,
     }
     dispatch(handleLogin(payload))
+    swal("Success", "welcome", "success")
     navigate("/")
   }
 

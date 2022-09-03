@@ -1,28 +1,33 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Navigation from "../../components/Navigation";
-import DetailCarResult from "../../components/DetailCarResult";
-import { NavMenu } from "../../components/Navigation/data";
+import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import Navigation from "../../components/Navigation"
+import DetailCarResult from "../../components/DetailCarResult"
+import { NavMenu } from "../../components/Navigation/data"
+import Footer from "../../components/Footer"
+import {
+  includeList,
+  excludeList,
+  refundList,
+} from "../../components/DetailCarResult/data"
 import {
   socialMediaLogo,
   userGroupIcon,
   angleLeftIcon,
-} from "../../const/staticData";
-import Footer from "../../components/Footer";
+} from "../../const/staticData"
 
 const Car = () => {
-  const [car, setCar] = useState({});
+  const [car, setCar] = useState({})
 
-  const param = useParams();
-  const id = param.id;
+  const param = useParams()
+  const id = param.id
 
   useEffect(() => {
     axios
       .get(`https://bootcamp-rent-car.herokuapp.com/admin/car/${id}`)
       .then((res) => setCar(res.data))
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => console.log(err))
+  }, [])
 
   const props = {
     car,
@@ -30,13 +35,16 @@ const Car = () => {
     NavMenu,
     userGroupIcon,
     angleLeftIcon,
-  };
+    includeList,
+    excludeList,
+    refundList,
+  }
   return (
     <div>
       <Navigation {...props} />
       <DetailCarResult {...props} />
       <Footer {...props} />
     </div>
-  );
-};
-export default Car;
+  )
+}
+export default Car

@@ -37,7 +37,7 @@ const Registration = () => {
       )
       .then((res) => {
         console.log(res)
-        swal("Berhasil", "Anda sudah terdaftar!", "success")
+        swal("Success", "you are registered!", "success")
         navigate("/login")
       })
       .catch((err) => console.log(err.message))

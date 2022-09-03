@@ -1,67 +1,78 @@
-import "./style.css";
-import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMoreOutlined";
+const includeList = [
+  {
+    id: 1,
+    include: "Apa saja yang termasuk dalam paket misal durasi max 12 jam",
+  },
+  {
+    id: 2,
+    include: "Sudah termasuk bensin selama 12 jam",
+  },
+  {
+    id: 3,
+    include: "Sudah termasuk Tiket Wisata",
+  },
+  {
+    id: 4,
+    include: "Sudah termasuk pajak",
+  },
+]
 
-const DataDetailCar = () => {
-  return (
-    <div className="DataDetailCar__section">
-      <div className="DataDetailCar__container">
-        <h3>Tentang Paket</h3>
-        <div className="DataDetailCar__include">
-          <h4>Include</h4>
-          <ul>
-            <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
-            <li>Sudah termasuk bensin selama 12 jam</li>
-            <li>Sudah termasuk Tiket Wisata</li>
-            <li>Sudah termasuk pajak</li>
-          </ul>
-        </div>
-        <div className="DataDetailCar__exclude">
-          <h4>Exclude</h4>
-          <ul>
-            <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
-            <li>
-              Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
-              20.000/jam
-            </li>
-            <li>Tidak termasuk akomodasi penginapan</li>
-          </ul>
-        </div>
-        <div className="DataDetailCar__refund">
-          <Accordion style={{ boxShadow: "none" }}>
-            <AccordionSummary
-              style={{ padding: 0 }}
-              expandIcon={<ExpandMoreIcon />}
-            >
-              <h4>Refund, Reschedule, Overtime</h4>
-            </AccordionSummary>
-            <AccordionDetails style={{ padding: "0" }}>
-              <ul>
-                <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
-                <li>
-                  Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
-                  20.000/jam
-                </li>
-                <li>Tidak termasuk akomodasi penginapan</li>
-                <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
-                <li>
-                  Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
-                  20.000/jam
-                </li>
-                <li>Tidak termasuk akomodasi penginapan</li>
-                <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
-                <li>
-                  Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
-                  20.000/jam
-                </li>
-                <li>Tidak termasuk akomodasi penginapan</li>
-              </ul>
-            </AccordionDetails>
-          </Accordion>
-        </div>
-      </div>
-    </div>
-  );
-};
+const excludeList = [
+  {
+    id: 1,
+    exclude: "Tidak termasuk biaya makan sopir Rp 75.000/hari",
+  },
+  {
+    id: 2,
+    exclude:
+      "Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam",
+  },
+  {
+    id: 3,
+    exclude: "Tidak termasuk akomodasi penginapan",
+  },
+]
 
-export default DataDetailCar;
+const refundList = [
+  {
+    id: 1,
+    refund: "Tidak termasuk biaya makan sopir Rp 75.000/hari",
+  },
+  {
+    id: 2,
+    refund:
+      "Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam",
+  },
+  {
+    id: 3,
+    refund: "Tidak termasuk akomodasi penginapan",
+  },
+  {
+    id: 4,
+    refund: "Tidak termasuk biaya makan sopir Rp 75.000/hari",
+  },
+  {
+    id: 5,
+    refund:
+      "  Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam",
+  },
+  {
+    id: 6,
+    refund: "Tidak termasuk akomodasi penginapan",
+  },
+  {
+    id: 7,
+    refund: "Tidak termasuk biaya makan sopir Rp 75.000/hari",
+  },
+  {
+    id: 8,
+    refund:
+      " Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam",
+  },
+  {
+    id: 9,
+    refund: "Tidak termasuk akomodasi penginapan",
+  },
+]
+
+export { includeList, excludeList, refundList }

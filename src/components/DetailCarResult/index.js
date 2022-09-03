@@ -1,11 +1,12 @@
-import DataDetailCar from "./data";
-import { Link } from "react-router-dom";
-import "./style.css";
-import noImage from "../../assets/no-image-available.png";
-import NumberFormat from "react-number-format";
+import DataDetailCar from "./detailCar"
+import { Link } from "react-router-dom"
+import "./style.css"
+import noImage from "../../assets/no-image-available.png"
+import NumberFormat from "react-number-format"
 
 const DetailCarResult = (props) => {
-  const { car, userGroupIcon, angleLeftIcon } = props;
+  const { car, userGroupIcon, angleLeftIcon } = props
+
   return (
     <section className="detail__section">
       <div className="detail__hero"></div>
@@ -49,7 +50,7 @@ const DetailCarResult = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default DetailCarResult;
+export default DetailCarResult

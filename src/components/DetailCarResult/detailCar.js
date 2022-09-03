@@ -1,4 +1,3 @@
-import "./style.css"
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMoreOutlined"
 import { includeList, excludeList, refundList } from "../DetailCarResult/data"

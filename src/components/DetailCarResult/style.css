@@ -35,8 +35,8 @@
 }
 
 .detail__result__car {
-  width: 405px;
-  height: 435px;
+  width: 407px;
+  min-height: 482px;
   border-radius: var(--bora-lg);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -46,21 +46,53 @@
   font-size: 1rem;
 }
 
+.detail__result__rental-date {
+  margin-top: 1.5rem;
+}
+
+.detail__result__rental-date p {
+  margin-bottom: 0.5rem;
+}
+
+.detail__result__rental-date input {
+  border: 1px solid var(--clr-success);
+  border-radius: var(--bora-sm);
+  height: 36px;
+  width: 339px;
+  font-weight: var(--fw-light);
+  padding: 10px;
+  background: var(--clr-neutral-100);
+}
+
 .detail__result__total-price {
-  width: 100%;
-  margin-top: 2rem;
+  /* width: 407px; */
+  margin: 1.5rem 0;
   display: flex;
   justify-content: space-between;
 }
 
-.detail__result__button-cari-mobil {
+.detail__result__total-price-detail {
+  display: flex;
+  gap: 0.3rem;
+  width: 100px;
+}
+
+.detail__result__total-price-detail input {
+  width: 100%;
+}
+
+.detail__result__button-payment button {
+  width: 358px;
+}
+
+.detail__result__button-back {
   display: flex;
   position: absolute;
   left: -50px;
-  top: 200px;
+  top: 10px;
 }
 
-.detail__result__button-cari-mobil button {
+.detail__result__button-back button {
   border-radius: var(--bora-sm);
   margin: auto;
 }
@@ -69,7 +101,7 @@
   background: transparent;
 }
 
-/*_ data css */
+/*_ detail car css */
 .DataDetailCar__section {
   display: flex;
   flex-direction: column;

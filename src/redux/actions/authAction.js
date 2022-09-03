@@ -1,7 +1,7 @@
 import TYPES from "../types"
 import axios from "axios"
 
-export const authAction = (payload) => {
+export const handleLogin = (payload) => {
   return (dispatch) => {
     axios
       .post(

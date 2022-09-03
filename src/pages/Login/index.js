@@ -1,5 +1,4 @@
-import "./style.css"
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { authAction } from "../../redux/actions/authAction"
 import { useState } from "react"
 import SignIn from "../../components/SignIn"
@@ -8,7 +7,6 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const { token } = useSelector((state) => state.authReducer)
   const dispatch = useDispatch()
 
   const handleEmail = (e) => {
@@ -34,7 +32,6 @@ const Login = () => {
     email,
     password,
     handleSubmit,
-    token,
   }
   return <SignIn {...props} />
 }

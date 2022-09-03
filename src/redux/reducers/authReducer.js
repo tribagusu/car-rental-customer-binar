@@ -6,7 +6,7 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TYPES.SIGNIN:
+    case TYPES.POST_LOGIN:
       return {
         token: action.payload,
       }

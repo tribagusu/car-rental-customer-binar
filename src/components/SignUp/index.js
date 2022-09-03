@@ -1,8 +1,16 @@
 import "./style.css"
 import { Link } from "react-router-dom"
 
-const SignIn = (props) => {
-  const { handleEmail, handlePassword, email, password, handleSubmit } = props
+const SignUp = (props) => {
+  const {
+    handleEmail,
+    handlePassword,
+    handleName,
+    handleSubmit,
+    email,
+    password,
+    name,
+  } = props
 
   return (
     <>
@@ -14,6 +22,12 @@ const SignIn = (props) => {
             </div>
             <h2>Welcome Back!</h2>
             <form onSubmit={handleSubmit} className="signin__form">
+              <div className="signin__name">
+                <div className="signin__label">
+                  <label>Name</label>
+                </div>
+                <input onChange={handleName} value={name} type="text" />
+              </div>
               <div className="signin__email">
                 <div className="signin__label">
                   <label>Email</label>
@@ -30,11 +44,11 @@ const SignIn = (props) => {
                   type="password"
                 />
               </div>
-              <button className="button">Sign In</button>
+              <button className="button">Sign Up</button>
             </form>
             <div className="signin__signup">
-              <p>Don't have an account?</p>
-              <Link to="/registration">Sign Up for free</Link>
+              <p>Already have an account?</p>
+              <Link to="/login">Sign In here</Link>
             </div>
           </div>
         </div>
@@ -51,4 +65,4 @@ const SignIn = (props) => {
   )
 }
 
-export default SignIn
+export default SignUp

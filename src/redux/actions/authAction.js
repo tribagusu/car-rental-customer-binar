@@ -12,9 +12,10 @@ export const authAction = (payload) => {
         console.log(res.data.access_token)
         localStorage.setItem("token", res.data.access_token)
         dispatch({
-          type: TYPES.SIGNIN,
+          type: TYPES.POST_LOGIN,
           payload: res.data.access_token,
         })
       })
+      .catch((err) => console.log(err.message))
   }
 }

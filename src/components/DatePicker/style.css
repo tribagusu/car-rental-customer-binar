@@ -1,24 +1,25 @@
 .rental-date {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .rental-date-start {
-  border: 1px solid var(--clr-neutral-200);
+  border: 1px solid var(--clr-success);
   border-radius: var(--bora-sm);
   height: 36px;
-  width: 165px;
+  width: 150px;
   font-weight: var(--fw-light);
   padding: 10px;
   background: var(--clr-neutral-100);
 }
 
 .rental-date-end {
-  border: 1px solid var(--clr-neutral-200);
+  border: 1px solid var(--clr-success);
   border-radius: var(--bora-sm);
   height: 36px;
-  width: 165px;
+  width: 150px;
   font-weight: var(--fw-light);
   padding: 10px;
   background: var(--clr-neutral-100);

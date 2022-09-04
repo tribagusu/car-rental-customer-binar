@@ -8,6 +8,10 @@ const RentalDate = () => {
   const [startDate, setStartDate] = useState(null)
   const [endDate, setEndDate] = useState(null)
 
+  const newStartDate = new Date(startDate).toLocaleDateString()
+  const newEndDate = new Date(endDate).toLocaleDateString()
+  // console.log(typeof newStartDate)
+
   return (
     <div className="rental-date">
       <div>
@@ -23,6 +27,7 @@ const RentalDate = () => {
           closeOnScroll={true}
         />
       </div>
+      <p>to</p>
       <div>
         <DatePicker
           className="rental-date-end"

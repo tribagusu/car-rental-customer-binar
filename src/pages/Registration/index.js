@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import SignUp from "../../components/SignUp"
 import swal from "sweetalert"
-import "./style.css"
 
 const Registration = () => {
   const [name, setName] = useState("")

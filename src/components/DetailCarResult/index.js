@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import noImage from "../../assets/no-image-available.png"
 import NumberFormat from "react-number-format"
 import DataDetailCar from "./DetailCar/index"
-import RentalDate from "./DatePicker"
-import ButtonPayment from "./ButtonPayment"
+import RentalDate from "../DatePicker/index"
+import ButtonPayment from "../ButtonPayment/index"
 
 const DetailCarResult = (props) => {
   const { car, userGroupIcon, angleLeftIcon } = props

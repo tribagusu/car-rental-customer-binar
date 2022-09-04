@@ -54,16 +54,6 @@
   margin-bottom: 0.5rem;
 }
 
-.detail__result__rental-date input {
-  border: 1px solid var(--clr-success);
-  border-radius: var(--bora-sm);
-  height: 36px;
-  width: 339px;
-  font-weight: var(--fw-light);
-  padding: 10px;
-  background: var(--clr-neutral-100);
-}
-
 .detail__result__total-price {
   /* width: 407px; */
   margin: 1.5rem 0;
@@ -79,10 +69,6 @@
 
 .detail__result__total-price-detail input {
   width: 100%;
-}
-
-.detail__result__button-payment button {
-  width: 358px;
 }
 
 .detail__result__button-back {

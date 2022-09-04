@@ -6,11 +6,6 @@ import DetailCarResult from "../../components/DetailCarResult"
 import { NavMenu } from "../../components/Navigation/data"
 import Footer from "../../components/Footer"
 import {
-  includeList,
-  excludeList,
-  refundList,
-} from "../../components/DetailCarResult/data"
-import {
   socialMediaLogo,
   userGroupIcon,
   angleLeftIcon,
@@ -35,9 +30,6 @@ const Car = () => {
     NavMenu,
     userGroupIcon,
     angleLeftIcon,
-    includeList,
-    excludeList,
-    refundList,
   }
   return (
     <div>

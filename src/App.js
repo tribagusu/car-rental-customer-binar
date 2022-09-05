@@ -5,7 +5,7 @@ import SearchCars from "./pages/SearchCars"
 import Login from "./pages/Login"
 import Registration from "./pages/Registration"
 import PaymentMethod from "./pages/Payment/Metode"
-import PayingProcess from "./pages/Payment/Pay"
+import PayingProcess from "./pages/Payment/Paying"
 import Tiket from "./pages/Payment/Tiket"
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="registration" element={<Registration />} />
         <Route path="payment/metode" element={<PaymentMethod />} />
         <Route path="payment/paying" element={<PayingProcess />} />
-        <Route path="payment/tike" element={<Tiket />} />
+        <Route path="payment/tiket" element={<Tiket />} />
       </Routes>
     </div>
   )

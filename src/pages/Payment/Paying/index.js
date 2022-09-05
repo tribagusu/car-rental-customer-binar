@@ -13,7 +13,7 @@ const props = {
   ButtonPilih,
 }
 
-const Tiket = () => {
+const PayingProcess = () => {
   return (
     <section>
       <Navigation {...props} />
@@ -23,4 +23,4 @@ const Tiket = () => {
   )
 }
 
-export default Tiket
+export default PayingProcess

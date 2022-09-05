@@ -1,9 +1,9 @@
-import "./style.css";
-import carImg from "../../assets/img_car.png";
-import { Link } from "react-router-dom";
+import "./style.css"
+import carImg from "../../assets/img_car.png"
+import { Link } from "react-router-dom"
 
 const Hero = (props) => {
-  const { ButtonSewa } = props;
+  const { ButtonSewa } = props
   return (
     <section className="hero__container" id="hero">
       <div className="container hero__columns">
@@ -23,7 +23,7 @@ const Hero = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

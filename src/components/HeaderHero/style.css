@@ -1,0 +1,36 @@
+.header__container {
+  width: 100%;
+  background-color: var(--clr-variant);
+  height: 300px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+
+/* .header__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+}
+
+.header__info {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+/* .header__info p {
+  margin: 2rem 0 1rem;
+  width: 90%;
+}
+
+.header__image img {
+  width: 704px;
+  height: 407px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+} */

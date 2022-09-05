@@ -1,10 +1,13 @@
 import "./style.css"
 import React from "react"
+import { Link } from "react-router-dom"
 
 const ButtonPayment = () => {
   return (
     <div className="detail__result__button-payment">
-      <button className="button">Lanjutkan Pembayaran</button>
+      <Link to="/payment/metode">
+        <button className="button">Lanjutkan Pembayaran</button>
+      </Link>
     </div>
   )
 }

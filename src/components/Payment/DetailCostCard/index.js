@@ -15,6 +15,7 @@ const DetailCostCard = ({ userGroupIcon }) => {
   const startDay = newStartDate.slice(2, 3)
   const endDay = newEndDate.slice(2, 3)
   const totalRent = Math.floor(endDay) - Math.floor(startDay)
+  const totalPrice = totalRent * car.price
 
   return (
     <>
@@ -27,20 +28,34 @@ const DetailCostCard = ({ userGroupIcon }) => {
         </div>
         <div className="detail-cost-card__total-detail">
           <div>
+            <p>
+              Total Rp
+              <span>
+                <NumberFormat
+                  value={totalPrice}
+                  decimalSeparator=","
+                  thousandSeparator="."
+                />
+              </span>
+            </p>
+          </div>
+          <div>
             <h3>Harga</h3>
-            <li>
-              <p>
-                Sewa Mobil Rp
-                <span>
-                  <NumberFormat
-                    value={car.price}
-                    decimalSeparator=","
-                    thousandSeparator="."
-                  />
-                </span>
-                x {totalRent}
-              </p>
-            </li>
+            <ul>
+              <li>
+                <p>
+                  Sewa Mobil Rp
+                  <span>
+                    <NumberFormat
+                      value={car.price}
+                      decimalSeparator=","
+                      thousandSeparator="."
+                    />
+                  </span>
+                  x {totalRent}
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="detail-cost-card__total-all"></div>

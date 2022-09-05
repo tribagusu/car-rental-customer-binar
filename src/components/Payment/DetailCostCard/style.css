@@ -1,4 +1,7 @@
 .detail-cost-card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 407px;
   min-height: 482px;
   border-radius: var(--bora-lg);

@@ -1,17 +1,17 @@
-import React from "react";
-import Navigation from "../../components/Navigation";
-import Hero from "../../components/Hero";
-import Services from "../../components/Services";
-import Strength from "../../components/Strength";
-import Testimonial from "../../components/Testimonial";
-import CallToAction from "../../components/CallToAction";
-import Faq from "../../components/Faq";
-import Footer from "../../components/Footer";
-import { servicesList } from "../../components/Services/data";
-import { strengthCard } from "../../components/Strength/data";
-import { faq } from "../../components/Faq/data";
-import { dataTestimoni } from "../../components/Testimonial/data";
-import { NavMenu } from "../../components/Navigation/data";
+import React from "react"
+import Navigation from "../../components/LandingPage/Navigation"
+import Hero from "../../components/Hero"
+import Services from "../../components/Services"
+import Strength from "../../components/Strength"
+import Testimonial from "../../components/Testimonial"
+import CallToAction from "../../components/CallToAction"
+import Faq from "../../components/Faq"
+import Footer from "../../components/Footer"
+import { servicesList } from "../../components/Services/data"
+import { strengthCard } from "../../components/Strength/data"
+import { faq } from "../../components/Faq/data"
+import { dataTestimoni } from "../../components/Testimonial/data"
+import { NavMenu } from "../../components/LandingPage/Navigation/data"
 
 import {
   checkIcon5,
@@ -19,7 +19,7 @@ import {
   ButtonSewa,
   angleLeftIcon,
   angleRightIcon,
-} from "../../const/staticData";
+} from "../../const/staticData"
 
 const Home = () => {
   const props = {
@@ -33,7 +33,7 @@ const Home = () => {
     strengthCard,
     angleLeftIcon,
     angleRightIcon,
-  };
+  }
 
   return (
     <div>
@@ -46,7 +46,7 @@ const Home = () => {
       <Faq {...props} />
       <Footer {...props} />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

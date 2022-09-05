@@ -2,7 +2,7 @@ import "./style.css"
 import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import { Link } from "react-router-dom"
 import { Fragment, default as React } from "react"
-import DrawerComp from "../Drawer"
+import DrawerComp from "./Drawer/index"
 
 const Navigation = (props) => {
   const { NavMenu } = props

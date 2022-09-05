@@ -1,4 +1,6 @@
 import "./style.css"
+
+//# components
 import DetailPaketCard from "./DetailPaketCard/index"
 import DetailCarCard from "./DetailCarCard"
 

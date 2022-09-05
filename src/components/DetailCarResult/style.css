@@ -34,50 +34,6 @@
   position: relative;
 }
 
-.detail__result__car {
-  width: 407px;
-  min-height: 482px;
-  border-radius: var(--bora-lg);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-}
-
-.detail__result__car h1 {
-  font-size: 1rem;
-}
-
-.detail__result__rental-date {
-  margin-top: 1.5rem;
-}
-
-.detail__result__rental-date p {
-  margin-bottom: 0.5rem;
-}
-
-.detail__result__total-price {
-  /* width: 407px; */
-  margin: 1.5rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.detail__result__total-price-detail {
-  display: flex;
-  gap: 0.3rem;
-  width: 100px;
-}
-
-.detail__result__total-price-detail input {
-  width: 100%;
-}
-
-.detail__result__button-back {
-  display: flex;
-  position: absolute;
-  left: -50px;
-  top: 10px;
-}
-
 .detail__result__button-back button {
   border-radius: var(--bora-sm);
   margin: auto;
@@ -85,26 +41,4 @@
 
 .detail__result__button-cari-mobil button:hover {
   background: transparent;
-}
-
-/*_ detail car css */
-.DetailPaketCard__section {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.DetailPaketCard__section h4 {
-  margin: 1rem 0;
-}
-
-.DetailPaketCard__section li {
-  list-style: circle;
-  font-weight: var(--fw-regular);
-  line-height: 1.6;
-}
-
-.DetailPaketCard__refund h4 {
-  margin: 0;
-  padding: 0;
 }

@@ -1,0 +1,36 @@
+.DetailCarCard__container {
+  width: 407px;
+  min-height: 482px;
+  border-radius: var(--bora-lg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.DetailCarCard__container h1 {
+  font-size: 1rem;
+}
+
+.DetailCarCard__rental-date {
+  margin-top: 1.5rem;
+}
+
+.DetailCarCard__rental-date p {
+  margin-bottom: 0.5rem;
+}
+
+.DetailCarCard__total-price {
+  /* width: 407px; */
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DetailCarCard__total-price-detail {
+  display: flex;
+  gap: 0.3rem;
+  width: 100px;
+}
+
+.DetailCarCard__total-price-detail input {
+  width: 100%;
+}

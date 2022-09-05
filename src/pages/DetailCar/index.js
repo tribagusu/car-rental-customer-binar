@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Navigation from "../../components/Navigation"
+import Navigation from "../../components/LandingPage/Navigation"
 import DetailCarResult from "../../components/DetailCarResult"
-import { NavMenu } from "../../components/Navigation/data"
+import { NavMenu } from "../../components/LandingPage/Navigation/data"
 import Footer from "../../components/Footer"
 import {
   socialMediaLogo,

@@ -2,6 +2,9 @@ import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMoreOutlined"
 import { includeList, excludeList, refundList } from "./data"
 
+//# style
+import "./style.css"
+
 const DetailPaketCard = () => {
   return (
     <div className="DetailPaketCard__section">

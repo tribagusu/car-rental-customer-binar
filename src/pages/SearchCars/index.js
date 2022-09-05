@@ -1,41 +1,41 @@
-import Navigation from "../../components/Navigation";
-import Hero from "../../components/Hero";
-import Footer from "../../components/Footer";
-import SearchBar from "../../components/SearchBar";
-import SearchCarResult from "../../components/SearchCarResult";
-import { NavMenu } from "../../components/Navigation/data";
-import { socialMediaLogo, ButtonPilih } from "../../const/staticData";
+import Navigation from "../../components/LandingPage/Navigation"
+import Hero from "../../components/Hero"
+import Footer from "../../components/Footer"
+import SearchBar from "../../components/SearchBar"
+import SearchCarResult from "../../components/SearchCarResult"
+import { NavMenu } from "../../components/LandingPage/Navigation/data"
+import { socialMediaLogo, ButtonPilih } from "../../const/staticData"
 
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 const SearchCars = () => {
-  const [data, setData] = useState([]);
-  const [name, setName] = useState("");
-  const [fdata, setFdata] = useState([]);
-  const [notFound, setNotFound] = useState(false);
+  const [data, setData] = useState([])
+  const [name, setName] = useState("")
+  const [fdata, setFdata] = useState([])
+  const [notFound, setNotFound] = useState(false)
 
   const handleChangeName = (e) => {
-    setName(e.target.value);
+    setName(e.target.value)
     if (!e.target.value.length) {
-      setFdata([]);
+      setFdata([])
       // setNotFound(true);
     }
-  };
+  }
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    const newArr = data.filter((e) => e.name === name);
-    setFdata(newArr);
+    e.preventDefault()
+    const newArr = data.filter((e) => e.name === name)
+    setFdata(newArr)
     // setNotFound(false);
-  };
+  }
 
   useEffect(() => {
     axios
       .get("https://bootcamp-rent-car.herokuapp.com/admin/car")
       .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => console.log(err))
+  }, [])
 
   const props = {
     socialMediaLogo,
@@ -45,7 +45,7 @@ const SearchCars = () => {
     handleSearch,
     name,
     // notFound,
-  };
+  }
 
   return (
     <div>
@@ -56,7 +56,7 @@ const SearchCars = () => {
       <SearchCarResult data={!fdata.length ? data : fdata} {...props} />
       <Footer {...props} />
     </div>
-  );
-};
+  )
+}
 
-export default SearchCars;
+export default SearchCars

@@ -1,18 +1,18 @@
-import { useState, Fragment, default as React } from "react";
-import { Link } from "react-router-dom";
+import { useState, Fragment, default as React } from "react"
+import { Link } from "react-router-dom"
 import {
   Drawer,
   IconButton,
   List,
   ListItemButton,
   ListItemText,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import { NavMenu } from "../Navigation/data";
+} from "@mui/material"
+import MenuIcon from "@mui/icons-material/Menu"
+import CloseIcon from "@mui/icons-material/Close"
+import { NavMenu } from "../../Navigation/data"
 
 const DrawerComp = () => {
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(false)
 
   return (
     <Fragment>
@@ -43,7 +43,7 @@ const DrawerComp = () => {
         <MenuIcon />
       </IconButton>
     </Fragment>
-  );
-};
+  )
+}
 
-export default DrawerComp;
+export default DrawerComp

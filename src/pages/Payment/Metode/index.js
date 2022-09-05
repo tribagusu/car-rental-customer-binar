@@ -6,6 +6,7 @@ import Navigation from "../../../components/Navigation"
 import Footer from "../../../components/Footer"
 import { NavMenu } from "../../../components/Navigation/data"
 import { socialMediaLogo } from "../../../const/staticData"
+import OrderSummaryCard from "../../../components/Payment/OrderSummaryCard"
 
 const props = {
   NavMenu,
@@ -17,6 +18,7 @@ const PaymentMethod = () => {
     <section>
       <Navigation {...props} />
       <HeaderHero />
+      <OrderSummaryCard />
       <Footer {...props} />
     </section>
   )

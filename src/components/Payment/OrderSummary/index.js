@@ -1,2 +1,0 @@
-//# style
-import "./style.css"

@@ -88,23 +88,23 @@
 }
 
 /*_ detail car css */
-.DataDetailCar__section {
+.DetailPaketCard__section {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.DataDetailCar__section h4 {
+.DetailPaketCard__section h4 {
   margin: 1rem 0;
 }
 
-.DataDetailCar__section li {
+.DetailPaketCard__section li {
   list-style: circle;
   font-weight: var(--fw-regular);
   line-height: 1.6;
 }
 
-.DataDetailCar__refund h4 {
+.DetailPaketCard__refund h4 {
   margin: 0;
   padding: 0;
 }

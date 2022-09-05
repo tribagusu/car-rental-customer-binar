@@ -2,12 +2,12 @@ import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMoreOutlined"
 import { includeList, excludeList, refundList } from "./data"
 
-const DataDetailCar = () => {
+const DetailPaketCard = () => {
   return (
-    <div className="DataDetailCar__section">
-      <div className="DataDetailCar__container">
+    <div className="DetailPaketCard__section">
+      <div className="DetailPaketCard__container">
         <h3>Tentang Paket</h3>
-        <div className="DataDetailCar__include">
+        <div className="DetailPaketCard__include">
           <h4>Include</h4>
           {includeList.map((item) => (
             <ul key={item.id}>
@@ -15,7 +15,7 @@ const DataDetailCar = () => {
             </ul>
           ))}
         </div>
-        <div className="DataDetailCar__exclude">
+        <div className="DetailPaketCard__exclude">
           <h4>Exclude</h4>
           {excludeList.map((item) => (
             <ul key={item.id}>
@@ -23,7 +23,7 @@ const DataDetailCar = () => {
             </ul>
           ))}
         </div>
-        <div className="DataDetailCar__refund">
+        <div className="DetailPaketCard__refund">
           <Accordion style={{ boxShadow: "none" }}>
             <AccordionSummary
               style={{ padding: 0 }}
@@ -45,4 +45,4 @@ const DataDetailCar = () => {
   )
 }
 
-export default DataDetailCar
+export default DetailPaketCard

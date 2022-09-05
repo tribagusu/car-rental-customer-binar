@@ -1,20 +1,48 @@
-.BankTransferCard__section {
+.bank-transfer-card__container {
+  width: 605px;
+  border-radius: var(--bora-lg);
+  padding: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.bank-transfer-card__title {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.BankTransferCard__section h4 {
-  margin: 1rem 0;
+.bank-transfer-card__title p {
+  margin: 1rem 0 3rem;
 }
 
-.BankTransferCard__section li {
-  list-style: circle;
-  font-weight: var(--fw-regular);
-  line-height: 1.6;
+.bank-transfer-card__bank-container {
+  display: flex;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  gap: 3rem;
+  border-bottom: 1px solid #eee;
 }
 
-.BankTransferCard__refund h4 {
-  margin: 0;
-  padding: 0;
+.bank-transfer-card__logo {
+  display: flex;
+  width: 65px;
+  height: 30px;
+  border: 1px solid var(--clr-neutral-200);
+  border-radius: 4px;
+}
+
+.bank-transfer-card__logo h5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: 200;
+}
+
+.bank-transfer-card__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

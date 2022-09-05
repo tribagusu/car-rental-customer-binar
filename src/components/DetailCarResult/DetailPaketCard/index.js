@@ -7,10 +7,10 @@ import "./style.css"
 
 const DetailPaketCard = () => {
   return (
-    <div className="DetailPaketCard__container">
-      <div className="DetailPaketCard__section">
+    <div className="detail-paket-card__container">
+      <div className="detail-paket-card__section">
         <h3>Tentang Paket</h3>
-        <div className="DetailPaketCard__include">
+        <div className="detail-paket-card__include">
           <h4>Include</h4>
           {includeList.map((item) => (
             <ul key={item.id}>
@@ -18,7 +18,7 @@ const DetailPaketCard = () => {
             </ul>
           ))}
         </div>
-        <div className="DetailPaketCard__exclude">
+        <div className="detail-paket-card__exclude">
           <h4>Exclude</h4>
           {excludeList.map((item) => (
             <ul key={item.id}>
@@ -26,7 +26,7 @@ const DetailPaketCard = () => {
             </ul>
           ))}
         </div>
-        <div className="DetailPaketCard__refund">
+        <div className="detail-paket-card__refund">
           <Accordion style={{ boxShadow: "none" }}>
             <AccordionSummary
               style={{ padding: 0 }}

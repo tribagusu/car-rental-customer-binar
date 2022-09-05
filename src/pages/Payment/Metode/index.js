@@ -1,4 +1,5 @@
-import React from "react"
+//# style
+import "./style.css"
 
 //# components
 import HeaderHero from "../../../components/Payment/HeaderHero"
@@ -21,7 +22,9 @@ const PaymentMethod = () => {
       <Navigation {...props} />
       <HeaderHero />
       <OrderSummaryCard />
-      <BankTransferCard />
+      <div className="payment-method-container">
+        <BankTransferCard />
+      </div>
       <Footer {...props} />
     </section>
   )

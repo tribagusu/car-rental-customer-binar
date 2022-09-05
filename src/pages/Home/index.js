@@ -1,16 +1,19 @@
 import React from "react"
+
+//# components
 import Navigation from "../../components/LandingPage/Navigation"
-import Hero from "../../components/Hero"
-import Services from "../../components/Services"
-import Strength from "../../components/Strength"
-import Testimonial from "../../components/Testimonial"
-import CallToAction from "../../components/CallToAction"
-import Faq from "../../components/Faq"
-import Footer from "../../components/Footer"
-import { servicesList } from "../../components/Services/data"
-import { strengthCard } from "../../components/Strength/data"
-import { faq } from "../../components/Faq/data"
-import { dataTestimoni } from "../../components/Testimonial/data"
+import Hero from "../../components/LandingPage/Hero"
+import Services from "../../components/LandingPage/Services"
+import Strength from "../../components/LandingPage/Strength"
+import Testimonial from "../../components/LandingPage/Testimonial"
+import CallToAction from "../../components/LandingPage/CallToAction"
+import Faq from "../../components/LandingPage/Faq"
+import Footer from "../../components/LandingPage/Footer"
+
+import { servicesList } from "../../components/LandingPage/Services/data"
+import { strengthCard } from "../../components/LandingPage/Strength/data"
+import { faq } from "../../components/LandingPage/Faq/data"
+import { dataTestimoni } from "../../components/LandingPage/Testimonial/data"
 import { NavMenu } from "../../components/LandingPage/Navigation/data"
 
 import {

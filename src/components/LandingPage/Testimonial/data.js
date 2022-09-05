@@ -1,11 +1,11 @@
-import testiImage1 from "../../assets/testimonials-1.jpg";
-import testiImage2 from "../../assets/testimonials-2.jpg";
-import testiImage3 from "../../assets/testimonials-3.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import testiImage1 from "../../../assets/testimonials-1.jpg"
+import testiImage2 from "../../../assets/testimonials-2.jpg"
+import testiImage3 from "../../../assets/testimonials-3.jpg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStar } from "@fortawesome/free-solid-svg-icons"
 
-const starsIcon = [<FontAwesomeIcon icon={faStar}></FontAwesomeIcon>];
-const starsIcon5 = Array(5).fill(starsIcon);
+const starsIcon = [<FontAwesomeIcon icon={faStar}></FontAwesomeIcon>]
+const starsIcon5 = Array(5).fill(starsIcon)
 
 const dataTestimoni = [
   {
@@ -32,6 +32,6 @@ const dataTestimoni = [
       "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”",
     name: "John Dee 32, Bromo",
   },
-];
+]
 
-export { dataTestimoni };
+export { dataTestimoni }

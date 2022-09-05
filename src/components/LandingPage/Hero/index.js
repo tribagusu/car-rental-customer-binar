@@ -1,5 +1,5 @@
 import "./style.css"
-import carImg from "../../assets/img_car.png"
+import carImg from "../../../assets/img_car.png"
 import { Link } from "react-router-dom"
 
 const Hero = (props) => {

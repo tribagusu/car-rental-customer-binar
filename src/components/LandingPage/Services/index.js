@@ -1,8 +1,8 @@
-import "./style.css";
-import serviceImg from "../../assets/img_service.png";
+import "./style.css"
+import serviceImg from "../../../assets/img_service.png"
 
 const Services = (props) => {
-  const { servicesList, checkIcon5 } = props;
+  const { servicesList, checkIcon5 } = props
   return (
     <section id="services">
       <div className="container services__container">
@@ -38,7 +38,7 @@ const Services = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

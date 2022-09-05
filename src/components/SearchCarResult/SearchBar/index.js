@@ -1,8 +1,8 @@
-import "./style.css";
-import { ButtonCari } from "../../const/staticData";
+import "./style.css"
+import { ButtonCari } from "../../../const/staticData"
 
 const SearchBar = (props) => {
-  const { handleChangeName, handleSearch, name } = props;
+  const { handleChangeName, handleSearch, name } = props
   return (
     <div className="search-bar__section1">
       <div className="search-bar__section2">
@@ -45,7 +45,7 @@ const SearchBar = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

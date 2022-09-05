@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from "axios"
+
+//# components
 import Navigation from "../../components/LandingPage/Navigation"
 import DetailCarResult from "../../components/DetailCarResult"
+import Footer from "../../components/LandingPage/Footer"
+
 import { NavMenu } from "../../components/LandingPage/Navigation/data"
-import Footer from "../../components/Footer"
 import {
   socialMediaLogo,
   userGroupIcon,

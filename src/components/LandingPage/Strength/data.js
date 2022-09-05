@@ -1,7 +1,7 @@
-import icon1 from "../../assets/icon_complete.png";
-import icon2 from "../../assets/icon_price.png";
-import icon3 from "../../assets/icon_24hrs.png";
-import icon4 from "../../assets/icon_professional.png";
+import icon1 from "../../../assets/icon_complete.png"
+import icon2 from "../../../assets/icon_price.png"
+import icon3 from "../../../assets/icon_24hrs.png"
+import icon4 from "../../../assets/icon_professional.png"
 
 const strengthCard = [
   {
@@ -32,6 +32,6 @@ const strengthCard = [
     detail:
       "Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu",
   },
-];
+]
 
-export { strengthCard };
+export { strengthCard }

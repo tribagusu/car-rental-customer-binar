@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import axios from "axios"
+
+//# redux
+import { useSelector, useDispatch } from "react-redux"
+import { handleCar } from "../../redux/actions/carAction"
 
 //# components
 import Navigation from "../../components/LandingPage/Navigation"
 import DetailCarResult from "../../components/DetailCarResult"
 import Footer from "../../components/LandingPage/Footer"
-
 import { NavMenu } from "../../components/LandingPage/Navigation/data"
 import {
   socialMediaLogo,
@@ -15,16 +17,13 @@ import {
 } from "../../const/staticData"
 
 const Car = () => {
-  const [car, setCar] = useState({})
-
+  const { car } = useSelector((state) => state.carReducer)
+  const dispatch = useDispatch()
   const param = useParams()
-  const id = param.id
 
   useEffect(() => {
-    axios
-      .get(`https://bootcamp-rent-car.herokuapp.com/admin/car/${id}`)
-      .then((res) => setCar(res.data))
-      .catch((err) => console.log(err))
+    const id = param.id
+    dispatch(handleCar(id))
   }, [])
 
   const props = {

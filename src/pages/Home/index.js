@@ -1,5 +1,3 @@
-import React from "react"
-
 //# components
 import Navigation from "../../components/LandingPage/Navigation"
 import Hero from "../../components/LandingPage/Hero"

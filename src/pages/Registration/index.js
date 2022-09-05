@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import SignUp from "../../components/SignUp"
+import SignUp from "../../components/UserAuth/SignUp"
 import swal from "sweetalert"
 
 const Registration = () => {

@@ -113,7 +113,6 @@ picture {
   border: 1px solid transparent;
   padding: 8px 12px;
   line-height: 20px;
-  cursor: pointer;
   transition: var(--trans);
 }
 
@@ -122,6 +121,7 @@ picture {
   border: 1px solid var(--clr-accent);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   color: var(--clr-accent);
+  cursor: pointer;
 }
 
 a {

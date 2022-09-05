@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { handleLogin } from "../../redux/actions/authAction"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import SignIn from "../../components/SignIn"
+import SignIn from "../../components/UserAuth/SignIn"
 import swal from "sweetalert"
 
 const Login = () => {

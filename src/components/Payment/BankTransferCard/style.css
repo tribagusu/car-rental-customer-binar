@@ -1,0 +1,20 @@
+.BankTransferCard__section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.BankTransferCard__section h4 {
+  margin: 1rem 0;
+}
+
+.BankTransferCard__section li {
+  list-style: circle;
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+}
+
+.BankTransferCard__refund h4 {
+  margin: 0;
+  padding: 0;
+}

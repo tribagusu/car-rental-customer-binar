@@ -1,3 +1,11 @@
+.DetailPaketCard__container {
+  width: 605px;
+  border-radius: var(--bora-lg);
+  padding: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
 .DetailPaketCard__section {
   display: flex;
   flex-direction: column;

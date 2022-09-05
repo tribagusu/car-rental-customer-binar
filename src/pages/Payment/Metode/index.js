@@ -4,9 +4,11 @@ import React from "react"
 import HeaderHero from "../../../components/Payment/HeaderHero"
 import Navigation from "../../../components/LandingPage/Navigation"
 import Footer from "../../../components/LandingPage/Footer"
+import OrderSummaryCard from "../../../components/Payment/OrderSummaryCard"
+import BankTransferCard from "../../../components/Payment/BankTransferCard"
+
 import { NavMenu } from "../../../components/LandingPage/Navigation/data"
 import { socialMediaLogo } from "../../../const/staticData"
-import OrderSummaryCard from "../../../components/Payment/OrderSummaryCard"
 
 const props = {
   NavMenu,
@@ -19,6 +21,7 @@ const PaymentMethod = () => {
       <Navigation {...props} />
       <HeaderHero />
       <OrderSummaryCard />
+      <BankTransferCard />
       <Footer {...props} />
     </section>
   )

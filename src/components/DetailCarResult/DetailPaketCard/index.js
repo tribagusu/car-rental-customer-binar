@@ -7,8 +7,8 @@ import "./style.css"
 
 const DetailPaketCard = () => {
   return (
-    <div className="DetailPaketCard__section">
-      <div className="DetailPaketCard__container">
+    <div className="DetailPaketCard__container">
+      <div className="DetailPaketCard__section">
         <h3>Tentang Paket</h3>
         <div className="DetailPaketCard__include">
           <h4>Include</h4>

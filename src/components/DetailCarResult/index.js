@@ -1,20 +1,19 @@
 import "./style.css"
 
 //# components
+import HeaderHero from "../Payment/HeaderHero"
 import DetailPaketCard from "./DetailPaketCard/index"
 import DetailCarCard from "./DetailCarCard"
 
 const DetailCarResult = (props) => {
   return (
-    <section className="detail__section">
-      <div className="detail__hero"></div>
+    <>
+      <HeaderHero />
       <div className="detail__result__container">
-        <div className="detail__result__info">
-          <DetailPaketCard />
-        </div>
+        <DetailPaketCard />
         <DetailCarCard {...props} />
       </div>
-    </section>
+    </>
   )
 }
 

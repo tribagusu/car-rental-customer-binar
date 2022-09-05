@@ -1,44 +1,7 @@
-/*_ index css */
-
-.detail__section {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.detail__hero {
-  width: 100%;
-  background-color: var(--clr-variant);
-  height: 200px;
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-  top: 0;
-}
-
 .detail__result__container {
   width: 1042px;
   min-height: 300px;
   display: flex;
   margin: 3rem auto 0;
   gap: 24px;
-}
-
-.detail__result__info {
-  width: 605px;
-  border-radius: var(--bora-lg);
-  padding: 2rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.detail__result__button-back button {
-  border-radius: var(--bora-sm);
-  margin: auto;
-}
-
-.detail__result__button-cari-mobil button:hover {
-  background: transparent;
 }

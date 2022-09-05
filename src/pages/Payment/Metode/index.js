@@ -10,7 +10,7 @@ import BankTransferCard from "../../../components/Payment/BankTransferCard"
 
 import { NavMenu } from "../../../components/LandingPage/Navigation/data"
 import { socialMediaLogo, userGroupIcon } from "../../../const/staticData"
-import DetailCostCard from "../../../components/Payment/DetailCostCard"
+import DetailPriceCard from "../../../components/Payment/DetailPriceCard"
 
 const props = {
   NavMenu,
@@ -26,7 +26,7 @@ const PaymentMethod = () => {
       <OrderSummaryCard />
       <div className="payment-method-container">
         <BankTransferCard />
-        <DetailCostCard {...props} />
+        <DetailPriceCard {...props} />
       </div>
       <Footer {...props} />
     </section>

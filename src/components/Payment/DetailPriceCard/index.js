@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 //# styles
 import "./style.css"
 
-const DetailCostCard = ({ userGroupIcon }) => {
+const DetailPriceCard = ({ userGroupIcon }) => {
   const { car } = useSelector((state) => state.carReducer)
   const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
 
@@ -19,14 +19,14 @@ const DetailCostCard = ({ userGroupIcon }) => {
 
   return (
     <>
-      <div className="detail-cost-card__container">
-        <div className="detail-cost-card__car">
+      <div className="detail-price-card__container">
+        <div className="detail-price-card__car">
           <h4>{car.name}</h4>
           <p>
             <span>{userGroupIcon}</span> {car.category}
           </p>
         </div>
-        <div className="detail-cost-card__total-detail">
+        <div className="detail-price-card__total-detail">
           <div>
             <p>
               Total Rp
@@ -58,7 +58,7 @@ const DetailCostCard = ({ userGroupIcon }) => {
             </ul>
           </div>
         </div>
-        <div className="detail-cost-card__total-all"></div>
+        <div className="detail-price-card__total-all"></div>
         <Link to="payment/paying">
           <button className="button">Bayar</button>
         </Link>
@@ -67,4 +67,4 @@ const DetailCostCard = ({ userGroupIcon }) => {
   )
 }
 
-export default DetailCostCard
+export default DetailPriceCard

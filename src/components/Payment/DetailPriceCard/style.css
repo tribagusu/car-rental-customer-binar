@@ -1,4 +1,4 @@
-.detail-cost-card__container {
+.detail-price-card__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,6 +9,6 @@
   padding: 2rem;
 }
 
-.detail-cost-card__container button {
+.detail-price-card__container button {
   width: 100%;
 }

@@ -1,30 +1,29 @@
 import NumberFormat from "react-number-format"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 //# styles
 import "./style.css"
 
 //# components
-// import ButtonPayment from "./ButtonPayment/index"
 
-const DetailCostCard = (props) => {
-  const { car } = props
+const DetailCostCard = ({ userGroupIcon }) => {
+  const { car } = useSelector((state) => state.carReducer)
   return (
     <>
-      {!!Object.keys(car).length ? (
-        <div className="detail-cost-card__container">
-          <div className="detail-cost-card__car">
-            <h1>{car.name}</h1>
-          </div>
-          <div className="detail-cost-card__total-detail"></div>
-          <div className="detail-cost-card__total-all"></div>
-          <Link to="payment/paying">
-            <button className="button">Bayar</button>
-          </Link>
+      <div className="detail-cost-card__container">
+        <div className="detail-cost-card__car">
+          <h4>{car.name}</h4>
+          <p>
+            <span>{userGroupIcon}</span> {car.category}
+          </p>
         </div>
-      ) : (
-        <p>loading...</p>
-      )}
+        <div className="detail-cost-card__total-detail"></div>
+        <div className="detail-cost-card__total-all"></div>
+        <Link to="payment/paying">
+          <button className="button">Bayar</button>
+        </Link>
+      </div>
     </>
   )
 }

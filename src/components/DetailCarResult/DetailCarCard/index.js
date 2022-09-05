@@ -21,7 +21,7 @@ const DetailCarCard = (props) => {
           </div>
           <h1>{car.name}</h1>
           <p>
-            {userGroupIcon} {car.category}
+            <span>{userGroupIcon}</span> {car.category}
           </p>
           <div className="DetailCarCard__rental-date">
             <p>Tentukan lama sewa mobil (max. 7 hari)</p>

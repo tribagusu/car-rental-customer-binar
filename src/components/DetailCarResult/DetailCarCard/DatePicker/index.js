@@ -1,16 +1,28 @@
 import "./style.css"
-import React, { useState } from "react"
 import DatePicker from "react-datepicker"
-// import DateView from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
-const RentalDate = () => {
-  const [startDate, setStartDate] = useState(null)
-  const [endDate, setEndDate] = useState(null)
+//# redux
+import { useSelector, useDispatch } from "react-redux"
+import TYPES from "../../../../redux/types"
 
-  const newStartDate = new Date(startDate).toLocaleDateString()
-  const newEndDate = new Date(endDate).toLocaleDateString()
-  // console.log(typeof newStartDate)
+const RentalDate = () => {
+  const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
+  const dispatch = useDispatch()
+
+  const handleStartDate = (date) => {
+    dispatch({
+      type: TYPES.START_DATE,
+      payload: date,
+    })
+  }
+
+  const handleEndDate = (date) => {
+    dispatch({
+      type: TYPES.END_DATE,
+      payload: date,
+    })
+  }
 
   return (
     <div className="rental-date">
@@ -18,12 +30,12 @@ const RentalDate = () => {
         <DatePicker
           className="rental-date-start"
           selected={startDate}
-          onChange={(date) => setStartDate(date)}
+          onChange={handleStartDate}
           selectsStart
           startDate={startDate}
           endDate={endDate}
           placeholderText="Mulai Sewa"
-          dateFormat="dd/MMM/yyyy"
+          // dateFormat="M/d/yyyy"
           closeOnScroll={true}
         />
       </div>
@@ -32,13 +44,13 @@ const RentalDate = () => {
         <DatePicker
           className="rental-date-end"
           selected={endDate}
-          onChange={(date) => setEndDate(date)}
+          onChange={handleEndDate}
           selectsEnd
           startDate={startDate}
           endDate={endDate}
           minDate={startDate}
           placeholderText="Akhir Sewa"
-          dateFormat="dd/MMM/yyyy"
+          // dateFormat="d/M/yyyy"
           closeOnScroll={true}
         />
       </div>

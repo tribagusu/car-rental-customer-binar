@@ -1,6 +1,8 @@
 const TYPES = {
   POST_LOGIN: "POST_LOGIN",
   GET_CAR: "GET_CAR",
+  START_DATE: "START_DATE",
+  END_DATE: "END_DATE",
 }
 
 export default TYPES

@@ -5,10 +5,17 @@ import { useSelector } from "react-redux"
 //# styles
 import "./style.css"
 
-//# components
-
 const DetailCostCard = ({ userGroupIcon }) => {
   const { car } = useSelector((state) => state.carReducer)
+  const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
+
+  const newStartDate = new Date(startDate).toLocaleDateString()
+  const newEndDate = new Date(endDate).toLocaleDateString()
+
+  const startDay = newStartDate.slice(2, 3)
+  const endDay = newEndDate.slice(2, 3)
+  const totalRent = Math.floor(endDay) - Math.floor(startDay)
+
   return (
     <>
       <div className="detail-cost-card__container">
@@ -18,7 +25,24 @@ const DetailCostCard = ({ userGroupIcon }) => {
             <span>{userGroupIcon}</span> {car.category}
           </p>
         </div>
-        <div className="detail-cost-card__total-detail"></div>
+        <div className="detail-cost-card__total-detail">
+          <div>
+            <h3>Harga</h3>
+            <li>
+              <p>
+                Sewa Mobil Rp
+                <span>
+                  <NumberFormat
+                    value={car.price}
+                    decimalSeparator=","
+                    thousandSeparator="."
+                  />
+                </span>
+                x {totalRent}
+              </p>
+            </li>
+          </div>
+        </div>
         <div className="detail-cost-card__total-all"></div>
         <Link to="payment/paying">
           <button className="button">Bayar</button>

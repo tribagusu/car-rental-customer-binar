@@ -3,6 +3,7 @@ import "./style.css"
 
 //# redux
 import { useSelector } from "react-redux"
+import moment from "moment/moment"
 
 const OrderSummaryCard = () => {
   const { car } = useSelector((state) => state.carReducer)

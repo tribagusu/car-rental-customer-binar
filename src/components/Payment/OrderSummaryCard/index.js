@@ -8,8 +8,8 @@ const OrderSummaryCard = () => {
   const { car } = useSelector((state) => state.carReducer)
   const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
 
-  const newStartDate = new Date(startDate).toLocaleDateString()
-  const newEndDate = new Date(endDate).toLocaleDateString()
+  const newStartDate = new Date(startDate).toLocaleDateString("en-AU")
+  const newEndDate = new Date(endDate).toLocaleDateString("en-AU")
 
   return (
     <div className="order-summary__section1">

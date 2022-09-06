@@ -6,6 +6,7 @@ import "./style.css"
 
 //# function
 import { currencyFormatter } from "../../../func/numberFormatter"
+import { rentDayCalculator } from "../../../func/rentDayCalculator"
 
 //# data
 import { costItems } from "./data"
@@ -17,17 +18,9 @@ const DetailPriceCard = ({ userGroupIcon }) => {
   // format currency
   const carPrice = currencyFormatter(car.price)
 
-  // convert object to date format
-  const newStartDate = new Date(startDate).toLocaleDateString()
-  const newEndDate = new Date(endDate).toLocaleDateString()
-
-  // take date only
-  const startDay = newStartDate.slice(2, 3)
-  const endDay = newEndDate.slice(2, 3)
-
   // calculation
-  const totalRent = Math.floor(endDay) - Math.floor(startDay)
-  const totalPrice = currencyFormatter(totalRent * car.price)
+  const totalRentalDays = rentDayCalculator(startDate, endDate)
+  const totalRentalPrice = currencyFormatter(totalRentalDays * car.price)
 
   return (
     <>
@@ -41,15 +34,15 @@ const DetailPriceCard = ({ userGroupIcon }) => {
         <div className="detail-order-card__total">
           <div>
             <p>Total</p>
-            <p>{totalPrice}</p>
+            <p>{totalRentalPrice}</p>
             <div className="detail-order-card__total-detail">
               <div className="detail-order-card__total-cost">
                 <h4>Harga</h4>
                 <div>
                   <li>
-                    Sewa Mobil {carPrice} x {totalRent} Hari
+                    Sewa Mobil {carPrice} x {totalRentalDays} Hari
                   </li>
-                  <p>{totalPrice}</p>
+                  <p>{totalRentalPrice}</p>
                 </div>
               </div>
               {costItems.map((item) => (
@@ -70,7 +63,7 @@ const DetailPriceCard = ({ userGroupIcon }) => {
         </div>
         <div className="detail-order-card__total-all">
           <p>Total</p>
-          <p>{totalPrice}</p>
+          <p>{totalRentalPrice}</p>
         </div>
         <Link to="payment/paying">
           <button className="button">Bayar</button>

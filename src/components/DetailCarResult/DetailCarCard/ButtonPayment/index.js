@@ -1,14 +1,22 @@
+//# style
 import "./style.css"
-import { Link, useNavigate } from "react-router-dom"
+
+//# react
+import { useNavigate } from "react-router-dom"
+
+//# redux
 import { useSelector } from "react-redux"
 
 const ButtonPayment = () => {
   const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
+  const { token } = useSelector((state) => state.authReducer)
 
   const navigate = useNavigate()
 
-  const handleClick = (e) => {
-    navigate("/payment/metode")
+  const handleClick = () => {
+    if (startDate && endDate) {
+      navigate("/payment/metode")
+    }
   }
 
   return (

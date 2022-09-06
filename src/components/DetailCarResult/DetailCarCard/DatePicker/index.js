@@ -38,6 +38,7 @@ const RentalDate = () => {
           placeholderText="Mulai Sewa"
           closeOnScroll={true}
           required={true}
+          dateFormat="dd/MM/yyyy"
         />
       </div>
       <p>to</p>
@@ -52,6 +53,8 @@ const RentalDate = () => {
           minDate={startDate}
           placeholderText="Akhir Sewa"
           closeOnScroll={true}
+          required={true}
+          dateFormat="dd/MM/yyyy"
         />
       </div>
     </div>

@@ -1,10 +1,14 @@
-import "./style.css";
-import { Link } from "react-router-dom";
-import noImage from "../../assets/no-image-available.png";
-import NumberFormat from "react-number-format";
+//# style
+import "./style.css"
+
+//# function
+import { currencyFormatter } from "../../func/NumberFormatter"
+
+import { Link } from "react-router-dom"
+import noImage from "../../assets/no-image-available.png"
 
 const SearchCarResult = (props) => {
-  const { data, ButtonPilih } = props;
+  const { data, ButtonPilih } = props
 
   return (
     <div className="search-result__section">
@@ -16,15 +20,7 @@ const SearchCarResult = (props) => {
                 {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
                 <div className="search-result__cards__info">
                   {!!car.name ? <h1>{car.name}</h1> : <h1>not available</h1>}
-                  <p>
-                    Rp{" "}
-                    <NumberFormat
-                      value={car.price}
-                      decimalSeparator=","
-                      thousandSeparator="."
-                    />{" "}
-                    / hari
-                  </p>
+                  <p>{`${currencyFormatter(car.price)} / hari`}</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ipsa accusamus doloribus quam veniam eligendi sed?
@@ -38,7 +34,7 @@ const SearchCarResult = (props) => {
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SearchCarResult;
+export default SearchCarResult

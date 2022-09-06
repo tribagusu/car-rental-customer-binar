@@ -5,6 +5,9 @@ import NumberFormat from "react-number-format"
 //# styles
 import "./style.css"
 
+//# function
+import { currencyFormatter } from "../../../func/NumberFormatter"
+
 //# components
 import RentalDate from "./DatePicker/index"
 import ButtonPayment from "./ButtonPayment/index"
@@ -15,27 +18,22 @@ const DetailCarCard = (props) => {
   return (
     <div>
       {!!Object.keys(car).length ? (
-        <div className="DetailCarCard__container">
-          <div className="DetailCarCard__car-image">
+        <div className="detail-car-card__container">
+          <div className="detail-car-card__car-image">
             {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
           </div>
           <h1>{car.name}</h1>
           <p>
             <span>{userGroupIcon}</span> {car.category}
           </p>
-          <div className="DetailCarCard__rental-date">
+          <div className="detail-car-card__rental-date">
             <p>Tentukan lama sewa mobil (max. 7 hari)</p>
             <RentalDate />
           </div>
-          <div className="DetailCarCard__total-price">
+          <div className="detail-car-card__total-price">
             <p>Total</p>
-            <div className="DetailCarCard__total-price-detail">
-              <p>Rp </p>
-              <NumberFormat
-                value={car.price}
-                decimalSeparator=","
-                thousandSeparator="."
-              />
+            <div className="detail-car-card__total-price-detail">
+              <p>{currencyFormatter(car.price)}</p>
             </div>
           </div>
           <ButtonPayment />

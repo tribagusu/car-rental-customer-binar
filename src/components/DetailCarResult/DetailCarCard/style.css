@@ -1,4 +1,4 @@
-.DetailCarCard__container {
+.detail-car-card__container {
   width: 407px;
   min-height: 482px;
   border-radius: var(--bora-lg);
@@ -6,31 +6,21 @@
   padding: 2rem;
 }
 
-.DetailCarCard__container h1 {
+.detail-car-card__container h1 {
   font-size: 1rem;
 }
 
-.DetailCarCard__rental-date {
+.detail-car-card__rental-date {
   margin-top: 1.5rem;
 }
 
-.DetailCarCard__rental-date p {
+.detail-car-card__rental-date p {
   margin-bottom: 0.5rem;
 }
 
-.DetailCarCard__total-price {
-  /* width: 407px; */
+.detail-car-card__total-price {
+  width: 100%;
   margin: 1.5rem 0;
   display: flex;
   justify-content: space-between;
-}
-
-.DetailCarCard__total-price-detail {
-  display: flex;
-  gap: 0.3rem;
-  width: 100px;
-}
-
-.DetailCarCard__total-price-detail input {
-  width: 100%;
 }

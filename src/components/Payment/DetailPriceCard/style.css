@@ -12,3 +12,18 @@
 .detail-price-card__container button {
   width: 100%;
 }
+
+.detail-price-card__total-detail li {
+  list-style: initial;
+  font-weight: 100;
+}
+
+.detail-price-card__total-detail div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-price-card__total-detail div > small {
+  color: #5cb85f;
+  font-weight: 100;
+}

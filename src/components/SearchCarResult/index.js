@@ -2,7 +2,7 @@
 import "./style.css"
 
 //# function
-import { currencyFormatter } from "../../func/NumberFormatter"
+import { currencyFormatter } from "../../func/numberFormatter"
 
 import { Link } from "react-router-dom"
 import noImage from "../../assets/no-image-available.png"

@@ -1,12 +1,11 @@
 import React from "react"
 import noImage from "../../../assets/no-image-available.png"
-import NumberFormat from "react-number-format"
 
 //# styles
 import "./style.css"
 
 //# function
-import { currencyFormatter } from "../../../func/NumberFormatter"
+import { currencyFormatter } from "../../../func/numberFormatter"
 
 //# components
 import RentalDate from "./DatePicker/index"
@@ -26,17 +25,19 @@ const DetailCarCard = (props) => {
           <p>
             <span>{userGroupIcon}</span> {car.category}
           </p>
-          <div className="detail-car-card__rental-date">
-            <p>Tentukan lama sewa mobil (max. 7 hari)</p>
-            <RentalDate />
-          </div>
-          <div className="detail-car-card__total-price">
-            <p>Total</p>
-            <div className="detail-car-card__total-price-detail">
-              <p>{currencyFormatter(car.price)}</p>
+          <form action="">
+            <div className="detail-car-card__rental-date">
+              <p>Tentukan lama sewa mobil (max. 7 hari)</p>
+              <RentalDate />
             </div>
-          </div>
-          <ButtonPayment />
+            <div className="detail-car-card__total-price">
+              <p>Total</p>
+              <div className="detail-car-card__total-price-detail">
+                <p>{currencyFormatter(car.price)}</p>
+              </div>
+            </div>
+            <ButtonPayment />
+          </form>
         </div>
       ) : (
         <p>loading...</p>

@@ -1,4 +1,4 @@
-.detail-price-card__container {
+.detail-order-card__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,21 +9,25 @@
   padding: 2rem;
 }
 
-.detail-price-card__container button {
+.detail-order-card__container button {
   width: 100%;
 }
 
-.detail-price-card__total-detail li {
+.detail-order-card__total-detail li {
   list-style: initial;
   font-weight: 100;
 }
+.detail-order-card__total-detail div > small {
+  color: #5cb85f;
+  font-weight: 100;
+}
 
-.detail-price-card__total-detail div {
+.detail-order-card__total-cost div {
   display: flex;
   justify-content: space-between;
 }
 
-.detail-price-card__total-detail div > small {
-  color: #5cb85f;
-  font-weight: 100;
+.detail-order-card__cost-items div {
+  display: flex;
+  justify-content: space-between;
 }

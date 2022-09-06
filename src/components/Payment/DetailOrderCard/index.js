@@ -5,7 +5,10 @@ import { useSelector } from "react-redux"
 import "./style.css"
 
 //# function
-import { currencyFormatter } from "../../../func/NumberFormatter"
+import { currencyFormatter } from "../../../func/numberFormatter"
+
+//# data
+import { costItems } from "./data"
 
 const DetailPriceCard = ({ userGroupIcon }) => {
   const { car } = useSelector((state) => state.carReducer)
@@ -28,51 +31,47 @@ const DetailPriceCard = ({ userGroupIcon }) => {
 
   return (
     <>
-      <div className="detail-price-card__container">
-        <div className="detail-price-card__car">
+      <div className="detail-order-card__container">
+        <div className="detail-order-card__car">
           <h4>{car.name}</h4>
           <p>
             <span>{userGroupIcon}</span> {car.category}
           </p>
         </div>
-        <div className="detail-price-card__total-cost">
+        <div className="detail-order-card__total">
           <div>
             <p>Total</p>
             <p>{totalPrice}</p>
-            <div className="detail-price-card__total-detail">
-              <>
+            <div className="detail-order-card__total-detail">
+              <div className="detail-order-card__total-cost">
                 <h4>Harga</h4>
                 <div>
                   <li>
-                    Sewa Mobil {carPrice} x {totalRent}
+                    Sewa Mobil {carPrice} x {totalRent} Hari
                   </li>
                   <p>{totalPrice}</p>
                 </div>
-              </>
-              <>
-                <h4>Biaya Lainnya</h4>
-                <div>
-                  <li>Pajak</li>
-                  <small>Termasuk</small>
+              </div>
+              {costItems.map((item) => (
+                <div key={item.id} className="detail-order-card__cost-items">
+                  <h4>{item.title}</h4>
+                  <div>
+                    <li>{item.item1}</li>
+                    <small>{item.note1}</small>
+                  </div>
+                  <div>
+                    <li>{item.item2}</li>
+                    <small>{item.note2}</small>
+                  </div>
                 </div>
-                <div>
-                  <li>Biaya makan sopir</li>
-                  <small>Termasuk</small>
-                </div>
-              </>
-              <>
-                <h4>Belum Termasuk</h4>
-                <div>
-                  <li>Bensin</li>
-                </div>
-                <div>
-                  <li>Tol dan Parkir</li>
-                </div>
-              </>
+              ))}
             </div>
           </div>
         </div>
-        <div className="detail-price-card__total-all"></div>
+        <div className="detail-order-card__total-all">
+          <p>Total</p>
+          <p>{totalPrice}</p>
+        </div>
         <Link to="payment/paying">
           <button className="button">Bayar</button>
         </Link>

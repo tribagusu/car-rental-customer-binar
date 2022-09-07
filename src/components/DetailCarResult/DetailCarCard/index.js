@@ -5,8 +5,8 @@ import { useSelector } from "react-redux"
 import "./style.css"
 
 //# function
-import { currencyFormatter } from "../../../func/numberFormatter"
-import { rentDayCalculator } from "../../../func/rentDayCalculator"
+import { currencyFormatter } from "../../../utils/numberFormatter"
+import { rentDayCalculator } from "../../../utils/rentDayCalculator"
 
 //# components
 import RentalDate from "./DatePicker/index"

@@ -13,6 +13,20 @@
   width: 100%;
 }
 
+.detail-order-card__total-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-order-card__total-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  border-bottom: 1px solid #d0d0d0;
+}
+
 .detail-order-card__total-detail li {
   list-style: initial;
   font-weight: 100;

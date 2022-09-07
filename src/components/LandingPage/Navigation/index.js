@@ -1,13 +1,30 @@
-import "./style.css"
-import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material"
-import { Link } from "react-router-dom"
 import { Fragment, default as React } from "react"
+import { Link, useNavigate } from "react-router-dom"
+
+//# style
+import "./style.css"
+
+//# lib
+import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import DrawerComp from "./Drawer/index"
+
+//# redux
+import { useSelector } from "react-redux"
 
 const Navigation = (props) => {
   const { NavMenu } = props
   const theme = useTheme()
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
+
+  // redux
+  const { token } = useSelector((state) => state.authReducer)
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    localStorage.removeItem("token")
+    navigate("/login")
+  }
+
   return (
     <Fragment>
       <AppBar
@@ -36,9 +53,15 @@ const Navigation = (props) => {
                       {NavMenu.map((item) => (
                         <li>{item}</li>
                       ))}
-                      <Link to="/login">
-                        <button className="button">Login</button>
-                      </Link>
+                      {!token ? (
+                        <Link to="/login">
+                          <button className="button">Login</button>
+                        </Link>
+                      ) : (
+                        <button onClick={handleLogout} className="button">
+                          Logout
+                        </button>
+                      )}
                     </ul>
                   </nav>
                 </div>

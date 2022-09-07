@@ -27,7 +27,7 @@ const DetailPaketCard = () => {
           ))}
         </div>
         <div className="detail-paket-card__refund">
-          <Accordion style={{ boxShadow: "none" }}>
+          <Accordion defaultExpanded={true} style={{ boxShadow: "none" }}>
             <AccordionSummary
               style={{ padding: 0 }}
               expandIcon={<ExpandMoreIcon />}

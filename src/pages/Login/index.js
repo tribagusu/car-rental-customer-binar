@@ -27,7 +27,12 @@ const Login = () => {
       password,
     }
     dispatch(handleLogin(payload))
-    swal("Success", "welcome", "success")
+    swal({
+      title: "Welcome!",
+      text: "Login successfully",
+      type: "success",
+      timer: 1500,
+    })
     navigate("/")
   }
 

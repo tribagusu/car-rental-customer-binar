@@ -65,7 +65,7 @@ const DetailPriceCard = ({ userGroupIcon }) => {
           <p>Total</p>
           <small>{totalRentalPrice}</small>
         </div>
-        <Link to="payment/paying">
+        <Link to="/payment/tiket">
           <button className="button">Bayar</button>
         </Link>
       </div>

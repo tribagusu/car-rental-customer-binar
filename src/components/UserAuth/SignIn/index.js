@@ -10,7 +10,9 @@ const SignIn = (props) => {
         <div className="signin__left">
           <div className="signin__container">
             <div className="signin__logo">
-              <img src="" alt="BCR" />
+              <Link to="/">
+                <h3>BCR LOGO</h3>
+              </Link>
             </div>
             <h2>Welcome Back!</h2>
             <form onSubmit={handleSubmit} className="signin__form">

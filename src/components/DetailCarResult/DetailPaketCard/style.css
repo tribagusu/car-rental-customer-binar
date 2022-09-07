@@ -9,7 +9,6 @@
 .detail-paket-card__section {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .detail-paket-card__section h4 {

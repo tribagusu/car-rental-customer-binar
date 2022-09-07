@@ -1,0 +1,43 @@
+.tiket-card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tiket-card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tiket-card__title img {
+  width: 48px;
+}
+
+.tiket-invoice {
+  width: 605px;
+  height: 290px;
+  border-radius: var(--bora-lg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tiket-invoice__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tiket-invoice-container {
+  width: 557px;
+  height: 162px;
+  background: #eee;
+  border: 1px dashed #d0d0d0;
+  border-radius: 4px;
+}

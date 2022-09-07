@@ -36,7 +36,12 @@ const Registration = () => {
       )
       .then((res) => {
         console.log(res)
-        swal("Success", "you are registered!", "success")
+        swal({
+          title: "Success!",
+          text: "Registered successfully",
+          type: "success",
+          timer: 1500,
+        })
         navigate("/login")
       })
       .catch((err) => console.log(err.message))

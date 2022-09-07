@@ -1,3 +1,5 @@
+import { Navigate } from "react-router-dom"
+
 //# style
 import "./style.css"
 
@@ -7,10 +9,12 @@ import Navigation from "../../../components/LandingPage/Navigation"
 import Footer from "../../../components/LandingPage/Footer"
 import OrderSummaryCard from "../../../components/Payment/OrderSummaryCard"
 import BankTransferCard from "../../../components/Payment/BankTransferCard"
-
 import { NavMenu } from "../../../components/LandingPage/Navigation/data"
 import { socialMediaLogo, userGroupIcon } from "../../../const/staticData"
 import DetailOrderCard from "../../../components/Payment/DetailOrderCard"
+
+//# redux
+import { useSelector } from "react-redux"
 
 const props = {
   NavMenu,
@@ -19,17 +23,25 @@ const props = {
 }
 
 const PaymentMethod = () => {
+  const { token } = useSelector((state) => state.authReducer)
+
   return (
-    <section>
-      <Navigation {...props} />
-      <HeaderHero />
-      <OrderSummaryCard />
-      <div className="payment-method-container">
-        <BankTransferCard />
-        <DetailOrderCard {...props} />
-      </div>
-      <Footer {...props} />
-    </section>
+    <>
+      {token ? (
+        <section>
+          <Navigation {...props} />
+          <HeaderHero />
+          <OrderSummaryCard />
+          <div className="payment-method-container">
+            <BankTransferCard />
+            <DetailOrderCard {...props} />
+          </div>
+          <Footer {...props} />
+        </section>
+      ) : (
+        <Navigate to="/login" replace />
+      )}
+    </>
   )
 }
 

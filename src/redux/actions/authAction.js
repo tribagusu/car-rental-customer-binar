@@ -1,7 +1,8 @@
 import TYPES from "../types"
 import axios from "axios"
+import swal from "sweetalert"
 
-export const handleLogin = (payload) => {
+export const handleLogin = (payload, navigate, setIsLoggedIn, from) => {
   return (dispatch) => {
     axios
       .post(
@@ -15,6 +16,14 @@ export const handleLogin = (payload) => {
           type: TYPES.POST_LOGIN,
           payload: res.data.access_token,
         })
+        swal({
+          title: "Welcome!",
+          text: "Login successfully",
+          icon: "success",
+          timer: 1500,
+        })
+        setIsLoggedIn(true)
+        navigate(from, { replace: true })
       })
       .catch((err) => console.log(err.message))
   }

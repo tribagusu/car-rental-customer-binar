@@ -1,5 +1,6 @@
 import noImage from "../../../assets/no-image-available.png"
 import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
 //# styles
 import "./style.css"
@@ -10,7 +11,6 @@ import { rentDayCalculator } from "../../../utils/rentDayCalculator"
 
 //# components
 import RentalDate from "./DatePicker/index"
-import ButtonPayment from "./ButtonPayment/index"
 
 const DetailCarCard = (props) => {
   const { userGroupIcon } = props
@@ -24,6 +24,12 @@ const DetailCarCard = (props) => {
   const totalRentalDays = rentDayCalculator(startDate, endDate)
   const totalRentalPrice = currencyFormatter(totalRentalDays * car.price)
 
+  // function
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate("/payment/metode")
+  }
+
   return (
     <div>
       <div className="detail-car-card__container">
@@ -34,7 +40,7 @@ const DetailCarCard = (props) => {
         <p>
           <span>{userGroupIcon}</span> {car.category}
         </p>
-        <form action="">
+        <>
           <div className="detail-car-card__rental-date">
             <p>Tentukan lama sewa mobil (max. 7 hari)</p>
             <RentalDate />
@@ -47,8 +53,12 @@ const DetailCarCard = (props) => {
               </p>
             </div>
           </div>
-          <ButtonPayment />
-        </form>
+          <div className="detail__result__button-payment">
+            <button onClick={handleClick} className="button">
+              Lanjutkan Pembayaran
+            </button>
+          </div>
+        </>
       </div>
     </div>
   )

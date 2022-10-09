@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
+import axios from "axios"
+import { useEffect } from "react"
 
 //# styles
 import "./style.css"
@@ -12,6 +14,7 @@ import { rentDayCalculator } from "../../../utils/rentDayCalculator"
 import { costItems } from "./data"
 
 const DetailPriceCard = ({ userGroupIcon }) => {
+  // state
   const { car } = useSelector((state) => state.carReducer)
   const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
 
@@ -21,6 +24,25 @@ const DetailPriceCard = ({ userGroupIcon }) => {
   // calculation
   const totalRentalDays = rentDayCalculator(startDate, endDate)
   const totalRentalPrice = currencyFormatter(totalRentalDays * car.price)
+
+  // method
+  const navigate = useNavigate()
+
+  // function
+  const handleBayar = () => {
+    const payload = {
+      start_rent_at: startDate,
+      finish_rent_at: endDate,
+      car_id: car.id,
+    }
+    axios
+      .post("https://bootcamp-rent-car.herokuapp.com/customer/order", payload)
+      .then((res) => {
+        console.log(res)
+        navigate("/payment/tiket")
+      })
+      .catch((err) => console.log(err.message))
+  }
 
   return (
     <>
@@ -65,9 +87,11 @@ const DetailPriceCard = ({ userGroupIcon }) => {
           <p>Total</p>
           <small>{totalRentalPrice}</small>
         </div>
-        <Link to="/payment/tiket">
-          <button className="button">Bayar</button>
-        </Link>
+        {/* <Link to="/payment/tiket"> */}
+        <button onClick={handleBayar} className="button">
+          Bayar
+        </button>
+        {/* </Link> */}
       </div>
     </>
   )

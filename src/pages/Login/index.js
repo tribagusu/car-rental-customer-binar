@@ -1,16 +1,19 @@
 import { useDispatch } from "react-redux"
 import { handleLogin } from "../../redux/actions/authAction"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation, Navigate } from "react-router-dom"
 import SignIn from "../../components/UserAuth/SignIn"
-import swal from "sweetalert"
 
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  // const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const user = localStorage.getItem("token")
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const location = useLocation()
+  const from = location.state?.from?.pathname || "/"
 
   const handleEmail = (e) => {
     setEmail(e.target.value)
@@ -26,14 +29,7 @@ const Login = () => {
       email,
       password,
     }
-    dispatch(handleLogin(payload))
-    swal({
-      title: "Welcome!",
-      text: "Login successfully",
-      type: "success",
-      timer: 1500,
-    })
-    navigate("/")
+    dispatch(handleLogin(payload, navigate, from))
   }
 
   const props = {
@@ -43,7 +39,17 @@ const Login = () => {
     password,
     handleSubmit,
   }
-  return <SignIn {...props} />
+  return (
+    <>
+      (
+      {user ? (
+        <Navigate to="/" state={{ from: location }} replace />
+      ) : (
+        <SignIn {...props} />
+      )}
+      )
+    </>
+  )
 }
 
 export default Login

@@ -23,11 +23,12 @@ const props = {
 }
 
 const PaymentMethod = () => {
-  const { token } = useSelector((state) => state.authReducer)
+  // const { token } = useSelector((state) => state.authReducer)
+  const user = localStorage.getItem("token")
 
   return (
     <>
-      {token ? (
+      {user ? (
         <section>
           <Navigation {...props} />
           <HeaderHero />

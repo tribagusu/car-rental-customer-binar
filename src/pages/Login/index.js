@@ -39,17 +39,7 @@ const Login = () => {
     password,
     handleSubmit,
   }
-  return (
-    <>
-      (
-      {user ? (
-        <Navigate to="/" state={{ from: location }} replace />
-      ) : (
-        <SignIn {...props} />
-      )}
-      )
-    </>
-  )
+  return <>({!user ? <SignIn {...props} /> : <Navigate to="/" replace />})</>
 }
 
 export default Login

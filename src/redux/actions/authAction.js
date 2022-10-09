@@ -22,8 +22,8 @@ export const handleLogin = (payload, navigate, setIsLoggedIn, from) => {
           icon: "success",
           timer: 1500,
         })
-        setIsLoggedIn(true)
-        navigate(from, { replace: true })
+        // setIsLoggedIn(true)
+        navigate("/carimobil")
       })
       .catch((err) => console.log(err.message))
   }

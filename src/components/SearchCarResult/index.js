@@ -13,7 +13,7 @@ const SearchCarResult = (props) => {
   return (
     <div className="search-result__section">
       <div className="search-result__container">
-        {!!data.length &&
+        {data.length ? (
           data.map((car) => (
             <div key={car.id} className="search-result__cards">
               <div>
@@ -31,7 +31,12 @@ const SearchCarResult = (props) => {
                 </div>
               </div>
             </div>
-          ))}
+          ))
+        ) : (
+          <div>
+            <p>Loading...</p>
+          </div>
+        )}
       </div>
     </div>
   )

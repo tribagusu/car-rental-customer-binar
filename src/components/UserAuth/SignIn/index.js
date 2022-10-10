@@ -2,7 +2,14 @@ import "./style.css"
 import { Link } from "react-router-dom"
 
 const SignIn = (props) => {
-  const { handleEmail, handlePassword, email, password, handleSubmit } = props
+  const {
+    handleEmail,
+    handlePassword,
+    email,
+    password,
+    handleSubmit,
+    logging,
+  } = props
 
   return (
     <>
@@ -20,7 +27,12 @@ const SignIn = (props) => {
                 <div className="signin__label">
                   <label>Email</label>
                 </div>
-                <input onChange={handleEmail} value={email} type="text" />
+                <input
+                  onChange={handleEmail}
+                  value={email}
+                  type="text"
+                  required
+                />
               </div>
               <div className="signin__password">
                 <div className="signin__label">
@@ -30,6 +42,7 @@ const SignIn = (props) => {
                   onChange={handlePassword}
                   value={password}
                   type="password"
+                  required
                 />
               </div>
               <button className="button">Sign In</button>
@@ -38,6 +51,11 @@ const SignIn = (props) => {
               <p>Don't have an account?</p>
               <Link to="/registration">Sign Up for free</Link>
             </div>
+            {logging && (
+              <div>
+                <p>Signing...</p>
+              </div>
+            )}
           </div>
         </div>
         <div className="signin__right">

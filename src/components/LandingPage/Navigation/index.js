@@ -8,16 +8,14 @@ import "./style.css"
 import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import DrawerComp from "./Drawer/index"
 
-//# redux
-import { useSelector } from "react-redux"
-
 const Navigation = (props) => {
   const { NavMenu } = props
   const theme = useTheme()
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
 
+  const user = localStorage.getItem("token")
+
   // redux
-  const { token } = useSelector((state) => state.authReducer)
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -53,7 +51,7 @@ const Navigation = (props) => {
                       {NavMenu.map((item) => (
                         <li>{item}</li>
                       ))}
-                      {!token ? (
+                      {!user ? (
                         <Link to="/login">
                           <button className="button">Login</button>
                         </Link>

@@ -2,7 +2,7 @@ import TYPES from "../types"
 import axios from "axios"
 import swal from "sweetalert"
 
-export const handleLogin = (payload, navigate, setIsLoggedIn, from) => {
+export const handleLogin = (payload, navigate) => {
   return (dispatch) => {
     axios
       .post(
@@ -22,7 +22,6 @@ export const handleLogin = (payload, navigate, setIsLoggedIn, from) => {
           icon: "success",
           timer: 1500,
         })
-        // setIsLoggedIn(true)
         navigate("/carimobil")
       })
       .catch((err) => console.log(err.message))

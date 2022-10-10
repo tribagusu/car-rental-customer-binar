@@ -7,7 +7,8 @@ import SignIn from "../../components/UserAuth/SignIn"
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  // const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [logging, setLogging] = useState(false)
+
   const user = localStorage.getItem("token")
 
   const dispatch = useDispatch()
@@ -24,6 +25,7 @@ const Login = () => {
   }
 
   const handleSubmit = (e) => {
+    setLogging(true)
     e.preventDefault()
     const payload = {
       email,
@@ -38,8 +40,10 @@ const Login = () => {
     email,
     password,
     handleSubmit,
+    setLogging,
+    logging,
   }
-  return <>({!user ? <SignIn {...props} /> : <Navigate to="/" replace />})</>
+  return <>{!user ? <SignIn {...props} /> : <Navigate to="/" replace />}</>
 }
 
 export default Login

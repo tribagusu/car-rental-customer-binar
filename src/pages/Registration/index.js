@@ -25,13 +25,12 @@ const Registration = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     const payload = {
-      name,
       email,
       password,
     }
     axios
       .post(
-        "https://bootcamp-rent-car.herokuapp.com/customer/auth/register",
+        "https://bootcamp-rent-cars.herokuapp.com/customer/auth/register",
         payload
       )
       .then((res) => {

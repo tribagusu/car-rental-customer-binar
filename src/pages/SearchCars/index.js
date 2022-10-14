@@ -32,7 +32,7 @@ const SearchCars = () => {
 
   useEffect(() => {
     axios
-      .get("https://bootcamp-rent-car.herokuapp.com/admin/car")
+      .get("https://bootcamp-rent-cars.herokuapp.com/customer/car")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err))
   }, [])

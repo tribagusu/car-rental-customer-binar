@@ -34,7 +34,11 @@ const DetailCarCard = (props) => {
     <div>
       <div className="detail-car-card__container">
         <div className="detail-car-card__car-image">
-          {!!car.image ? <img src={car.image} /> : <img src={noImage} />}
+          {!!car.image ? (
+            <img src={car.image} alt="car" />
+          ) : (
+            <img src={noImage} alt="nocar" />
+          )}
         </div>
         <h1>{car.name}</h1>
         <p>

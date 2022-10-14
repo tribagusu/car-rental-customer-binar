@@ -6,7 +6,7 @@ export const handleLogin = (payload, navigate) => {
   return (dispatch) => {
     axios
       .post(
-        "https://bootcamp-rent-car.herokuapp.com/customer/auth/login",
+        "https://bootcamp-rent-cars.herokuapp.com/customer/auth/login",
         payload
       )
       .then((res) => {

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 import axios from "axios"
-import { useEffect } from "react"
+import access_token from "../../UserAuth/accessToken"
 
 //# styles
 import "./style.css"
@@ -36,7 +36,13 @@ const DetailPriceCard = ({ userGroupIcon }) => {
       car_id: car.id,
     }
     axios
-      .post("https://bootcamp-rent-car.herokuapp.com/customer/order", payload)
+      .post(
+        "https://bootcamp-rent-cars.herokuapp.com/customer/order",
+        payload,
+        {
+          headers: { access_token },
+        }
+      )
       .then((res) => {
         console.log(res)
         navigate("/payment/tiket")

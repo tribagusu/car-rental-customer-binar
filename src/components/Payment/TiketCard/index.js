@@ -1,7 +1,7 @@
 import iconSuccess from "../../../assets/icon_success.png"
 import downloadButton from "../../../assets/download-button.png"
 
-import { Navigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 //# style
 import "./style.css"
@@ -17,9 +17,9 @@ const TiketCard = () => {
       <div className="tiket-invoice">
         <div className="tiket-invoice__header">
           <h4>Invoice</h4>
-          <Navigate to="/carimobil">
+          <Link to="/carimobil">
             <img src={downloadButton} alt="download" />
-          </Navigate>
+          </Link>
         </div>
         <small>*no invoice</small>
         <div className="tiket-invoice-container"></div>

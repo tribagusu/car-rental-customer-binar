@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 import axios from "axios"
 import access_token from "../../UserAuth/accessToken"
+import { userGroupIcon } from "../../../const/staticData"
 
 //# styles
 import "./style.css"
@@ -13,7 +14,7 @@ import { rentDayCalculator } from "../../../utils/rentDayCalculator"
 //# data
 import { costItems } from "./data"
 
-const DetailPriceCard = ({ userGroupIcon }) => {
+const DetailPriceCard = () => {
   // state
   const { car } = useSelector((state) => state.carReducer)
   const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)

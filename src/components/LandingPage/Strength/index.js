@@ -1,7 +1,7 @@
-import "./style.css";
+import "./style.css"
+import { strengthCard } from "./data"
 
-const Strength = (props) => {
-  const { strengthCard } = props;
+const Strength = () => {
   return (
     <section id="strength">
       <div className="container  strength__container">
@@ -20,7 +20,7 @@ const Strength = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Strength;
+export default Strength

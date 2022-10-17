@@ -3,8 +3,6 @@ import Hero from "../../components/LandingPage/Hero"
 import Footer from "../../components/LandingPage/Footer"
 import SearchBar from "../../components/SearchCarResult/SearchBar"
 import SearchCarResult from "../../components/SearchCarResult"
-import { NavMenu } from "../../components/LandingPage/Navigation/data"
-import { socialMediaLogo, ButtonPilih } from "../../const/staticData"
 
 import { useEffect, useState } from "react"
 import axios from "axios"
@@ -41,9 +39,6 @@ const SearchCars = () => {
   }, [])
 
   const props = {
-    socialMediaLogo,
-    NavMenu,
-    ButtonPilih,
     handleChangeName,
     handleSearch,
     name,
@@ -52,12 +47,12 @@ const SearchCars = () => {
 
   return (
     <div>
-      <Navigation {...props} />
+      <Navigation />
       <Hero />
       <SearchBar {...props} />
       {/* {!!notFound && <h1>Data tidak ditemukan</h1>} */}
-      <SearchCarResult data={!fdata.length ? data : fdata} {...props} />
-      <Footer {...props} />
+      <SearchCarResult data={!fdata.length ? data : fdata} />
+      <Footer />
     </div>
   )
 }

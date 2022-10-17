@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./style.css";
+import React, { useState } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import "./style.css"
 
-const Testimonial = (props) => {
-  const { dataTestimoni, angleLeftIcon, angleRightIcon } = props;
-  const [sliderRef, setSliderRef] = useState(null);
+import { dataTestimoni } from "./data"
+import { angleLeftIcon, angleRightIcon } from "../../../const/staticData"
+
+const Testimonial = () => {
+  const [sliderRef, setSliderRef] = useState(null)
   const settings = {
     dots: false,
     infinite: true,
@@ -38,7 +40,7 @@ const Testimonial = (props) => {
         },
       },
     ],
-  };
+  }
 
   return (
     <section className="carousel" id="testimonial">
@@ -71,7 +73,7 @@ const Testimonial = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial

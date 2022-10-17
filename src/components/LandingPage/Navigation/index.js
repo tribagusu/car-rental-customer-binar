@@ -1,5 +1,6 @@
 import { Fragment, default as React } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import { NavMenu } from "./data"
 
 //# style
 import "./style.css"
@@ -8,8 +9,7 @@ import "./style.css"
 import { AppBar, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import DrawerComp from "./Drawer/index"
 
-const Navigation = (props) => {
-  const { NavMenu } = props
+const Navigation = () => {
   const theme = useTheme()
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
 

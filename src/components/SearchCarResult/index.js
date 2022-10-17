@@ -7,10 +7,9 @@ import { currencyFormatter } from "../../utils/numberFormatter"
 import { Link } from "react-router-dom"
 import noImage from "../../assets/no-image-available.png"
 import SkeletonCard from "../Skeletons/SkeletonCard"
+import { ButtonPilih } from "../../const/staticData"
 
-const SearchCarResult = (props) => {
-  const { data, ButtonPilih } = props
-
+const SearchCarResult = ({ data }) => {
   return (
     <div className="search-result__section">
       <div className="search-result__container">

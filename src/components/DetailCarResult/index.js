@@ -5,13 +5,13 @@ import HeaderHero from "../Payment/HeaderHero"
 import DetailPaketCard from "./DetailPaketCard/index"
 import DetailCarCard from "./DetailCarCard"
 
-const DetailCarResult = (props) => {
+const DetailCarResult = () => {
   return (
     <>
       <HeaderHero />
       <div className="detail__result__container">
         <DetailPaketCard />
-        <DetailCarCard {...props} />
+        <DetailCarCard />
       </div>
     </>
   )

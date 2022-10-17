@@ -9,12 +9,6 @@ import { handleCar } from "../../redux/actions/carAction"
 import Navigation from "../../components/LandingPage/Navigation"
 import DetailCarResult from "../../components/DetailCarResult"
 import Footer from "../../components/LandingPage/Footer"
-import { NavMenu } from "../../components/LandingPage/Navigation/data"
-import {
-  socialMediaLogo,
-  userGroupIcon,
-  angleLeftIcon,
-} from "../../const/staticData"
 
 const Car = () => {
   const { car } = useSelector((state) => state.carReducer)
@@ -26,18 +20,11 @@ const Car = () => {
     dispatch(handleCar(id))
   }, [])
 
-  const props = {
-    car,
-    socialMediaLogo,
-    NavMenu,
-    userGroupIcon,
-    angleLeftIcon,
-  }
   return (
     <div>
-      <Navigation {...props} />
-      <DetailCarResult {...props} />
-      <Footer {...props} />
+      <Navigation />
+      <DetailCarResult />
+      <Footer />
     </div>
   )
 }

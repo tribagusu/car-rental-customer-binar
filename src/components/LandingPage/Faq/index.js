@@ -1,15 +1,9 @@
-import "./style.css";
-import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMoreOutlined";
-// import { useState } from "react";
+import "./style.css"
+import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMoreOutlined"
+import { faq } from "./data"
 
-const Faq = (props) => {
-  const { faq } = props;
-
-  // const [selected, setSelected] = useState(-1);
-  // const handleSelected = (panel) => (e, newValue) => {
-  //   setSelected(newValue ? panel : -1);
-  // };
+const Faq = () => {
   return (
     <section id="faq">
       <div className="container">
@@ -20,12 +14,7 @@ const Faq = (props) => {
           </div>
           <div className="faq__column__right">
             {faq.map((item) => (
-              <Accordion
-                key={item.id}
-                className="faq"
-                // expanded={selected === 1}
-                // onChange={handleSelected(1)}
-              >
+              <Accordion key={item.id} className="faq">
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                   <h4>{item.question}</h4>
                 </AccordionSummary>
@@ -38,7 +27,7 @@ const Faq = (props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Faq;
+export default Faq

@@ -11,9 +11,9 @@ import { rentDayCalculator } from "../../../utils/rentDayCalculator"
 
 //# components
 import RentalDate from "./DatePicker/index"
+import { userGroupIcon } from "../../../const/staticData"
 
-const DetailCarCard = (props) => {
-  const { userGroupIcon } = props
+const DetailCarCard = () => {
   const { car } = useSelector((state) => state.carReducer)
   const { startDate, endDate } = useSelector((state) => state.rentalDateReducer)
 

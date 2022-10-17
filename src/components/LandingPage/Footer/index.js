@@ -1,7 +1,8 @@
-import "./style.css";
+import { NavMenu } from "../Navigation/data"
+import { socialMediaLogo } from "../../../const/staticData"
+import "./style.css"
 
-const Footer = (props) => {
-  const { socialMediaLogo, NavMenu } = props;
+const Footer = () => {
   return (
     <footer>
       <div className="container">
@@ -42,7 +43,7 @@ const Footer = (props) => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

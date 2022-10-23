@@ -2,7 +2,7 @@ import "./style.css"
 import { ButtonCari } from "../../../const/staticData"
 
 const SearchBar = (props) => {
-  const { handleChangeName, handleSearch, name } = props
+  const { handleCarName, handleSearch, handleCarCategory } = props
   return (
     <div className="search-bar__section1">
       <div className="search-bar__section2">
@@ -14,8 +14,8 @@ const SearchBar = (props) => {
                 <input
                   type="text"
                   placeholder="Ketik nama/tipe mobil"
-                  onChange={handleChangeName}
-                  value={name}
+                  onChange={handleCarName}
+                  // value={name}
                 />
               </div>
               <div>
@@ -23,7 +23,7 @@ const SearchBar = (props) => {
                 <input
                   type="text"
                   placeholder="Masukkan Kapasitas Mobil"
-                  disabled
+                  onChange={handleCarCategory}
                 />
               </div>
               <div>
@@ -32,10 +32,12 @@ const SearchBar = (props) => {
               </div>
               <div>
                 <h4>Status</h4>
-                <select name="status" id="status" defaultValue={"status mobil"}>
-                  <option value="true">True</option>
-                  <option value="false">False</option>
-                </select>
+                <select
+                  disabled
+                  name="status"
+                  id="status"
+                  defaultValue={"status mobil"}
+                ></select>
               </div>
               <div className="search-bar__button">
                 <button>{ButtonCari}</button>

@@ -48,8 +48,8 @@ const Navigation = () => {
                   </Link>
                   <nav className="primary__navigation">
                     <ul className="nav__list">
-                      {NavMenu.map((item) => (
-                        <li>{item}</li>
+                      {NavMenu.map((item, index) => (
+                        <li key={index}>{item}</li>
                       ))}
                       {!user ? (
                         <Link to="/login">

@@ -6,7 +6,6 @@ export const handleCar = (id) => {
     axios
       .get(`https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`)
       .then((res) => {
-        console.log(res)
         dispatch({
           type: TYPES.GET_CAR,
           payload: res.data,

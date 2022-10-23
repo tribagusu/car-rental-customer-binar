@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import DetailCar from "./pages/DetailCar"
 import Home from "./pages/Home"
 import SearchCars from "./pages/SearchCars"
@@ -20,6 +20,7 @@ const App = () => {
         <Route path="payment/metode" element={<PaymentMethod />} />
         <Route path="payment/paying" element={<PayingProcess />} />
         <Route path="payment/tiket" element={<Tiket />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   )

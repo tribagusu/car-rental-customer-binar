@@ -28,7 +28,7 @@ const SearchBar = (props) => {
               </div>
               <div>
                 <h4>Harga</h4>
-                <input type="text" placeholder="Masukkan Harga Sewa" disabled />
+                <input type="text" disabled />
               </div>
               <div>
                 <h4>Status</h4>
